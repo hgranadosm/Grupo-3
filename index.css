@@ -9,7 +9,7 @@ body{
     background-color: #ffffff;
     color: #282d4d;
     margin: auto;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header{
@@ -29,6 +29,7 @@ header{
     padding: 13px 32px;
     cursor: pointer;
     margin-left: 23px;
+    border-radius: 10px;
     transition: .5s;
 }
 
@@ -46,7 +47,7 @@ header{
 nav a{
     position: relative;
     font-size: 1.125rem;
-    font-weight: 800;
+    font-weight: 500;
     color: #282d4d;
     padding: 3px 22px;
     text-decoration: none;
@@ -61,13 +62,157 @@ nav a:hover{
 
 .containerInicio{
     text-align: center;
-    padding: 50px 20%;
+    padding: 50px 14%;
 }
 
-.titulo{
+.tituloPrincipal{
     font-size: 3em;
+    margin-bottom: 20px;
+    line-height: 1;
 }
 
 .texto{
     padding-top: 40px;
+    font-size: 1.15em;
+    font-weight: 400;
+    margin-bottom: 100px;
 }
+
+.container2{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+}
+
+.columnaImagen{
+    max-height: 450px;
+    max-width: 450px;
+}
+
+.columnaImagen img{
+    width: 100%; 
+    height: 100%;
+    border-radius: 50px;
+}
+
+.columnaTexto{
+    width: 45%;
+    padding: 40px;
+}
+
+.titulo{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.texto2{
+    font-size: 1.15em;
+    font-weight: 400;
+}
+
+.container{
+    text-align: center;
+    padding: 100px 14%;
+}
+
+.texto3{
+    margin-top: 50px;
+    font-size: 1.15em;
+    font-weight: 400;
+}
+
+.contenedor-titulo {
+    position: relative;
+}
+
+.decorado:after {
+    content: url(https://akadian.com/wp-content/themes/Akadian-Wordpress-Theme/assets/images/svgs/full-sparks.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 80%;
+    left: 68px;
+    width: 150px;
+    height: 150px;
+    transform: translate3d(46%, 46%, 0);
+    right: 0px; 
+}
+
+.cards{
+    display: flex;
+    height: 400px;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid #493c2b24;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card i{
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.card i:hover{
+    color: #ecf007;
+
+}
+
+.card h3{
+    margin-bottom: 40px;
+}
+
+.card p{
+    margin-bottom: 40px;
+}
+
+.enlace{
+    margin-top: 40px;
+}
+
+.cardsNoticias{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.cardInfo{
+    background-color: white;
+    border: 1px solid #493c2b24;
+    border-radius: 10px;
+}
+
+.cardArriba{
+    padding: 20px;
+}
+
+.cardAbajo{
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+.imagenCard{
+    width: 100%;
+    height: 250px;
+}
+
+.imagenCard img{
+    width: 100%;
+    height: 100%;
+}
+
