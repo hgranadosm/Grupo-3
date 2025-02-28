@@ -180,6 +180,10 @@ nav a:hover{
 
 .enlace{
     margin-top: 40px;
+    color: #f57a47;
+    text-decoration: none;
+    font-weight: 600;
+    align-content: start;
 }
 
 .cardsNoticias{
@@ -208,7 +212,7 @@ nav a:hover{
 }
 .imagenCard{
     width: 100%;
-    height: 250px;
+    height: 300px;
 }
 
 .imagenCard img{
@@ -216,3 +220,14 @@ nav a:hover{
     height: 100%;
 }
 
+.botonCard{
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    color: #ffffff;
+    background-color: #f57a47;
+    padding: 13px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+}

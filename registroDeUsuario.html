@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuario</title>
+    <link rel="stylesheet" href="./registroDeUsuario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="containerPadre">
+        <div class="containerTitulo">
+            <h3 class="tituloRegistro">Registro De Usurio</h3>
+            <a class="InicioSesion" href="#">Iniciar Sesión</a>
+        </div>
+
+        <div class="containerPerfil">
+            <div class="usuario">
+                <img src="./img/perfil.png" alt="">
+            </div>
+            <div class="icono">
+                <i class="fa-solid fa-image"></i>
+            </div>
+        </div>
+
+        <div class="contenedorFormulario">
+            <div class="containerNombre">
+                <div class="nombre">
+                    <input type="text" name="nombre" placeholder="Name">
+                </div>
+
+                <div class="primerApellido">
+                    <input type="text" name="apellido1" placeholder="Primer Apellido">
+                </div>
+
+                <div class="segundoApellido">
+                    <input type="text" name="apellido2" placeholder="Segundo Apellido">
+                </div>
+            </div>
+
+            <div class="containerCorreo">
+                <div class="correo">
+                    <input type="email" name="correo" placeholder="Correo">
+                </div>
+
+                <div class="Identificacion">
+                    <input type="text" name="identificacion" placeholder="Identificacion">
+                </div>
+
+                <div class="telefono">
+                    <input type="tel" name="telefono" placeholder="Teléfono">
+                </div>
+            </div>
+
+            <div class="containerContraseña">
+                <div class="contraseña">
+                    <input type="password" name="contraseña" placeholder="Contraseña">
+                </div>
+
+                <div class="menuDesplegable">
+                    <select name="distritos" id="distritos">
+                        <option value="#" selected disabled>Distrito</option>
+                        <option value="San Pedro">San Pedro</option>
+                        <option value="Sabanilla">Sabanilla</option>
+                        <option value="Mercedes">Mercedes</option>
+                        <option value="San Rafael">San Rafael</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="containerMensaje">
+                <div class="mensaje">
+                    <textarea rows="10" name="mensaje" id="mensaje" placeholder="Detalles Adicionales"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="containerBoton">
+            <div class="terminosYCondiciones">
+                <p>By signing up, you agree to our Terms of Service and Privacy Policy</p>
+            </div>
+
+            <div class="Boton">
+                <button type="button">Crear Cuenta</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

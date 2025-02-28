@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f1f5f9;
+    color: #282d4d;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.containerPadre{
+    max-width: 650px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.containerTitulo{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0
+}
+
+input, select, textarea {
+    border: 1px solid #493c2b24;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
+
+.containerPerfil{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0
+}
+
+.usuario{
+    padding-right: 10px;
+}
+
+.icono{
+    background-color: #282d4d;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 100px;
+}
+
+.containerNombre{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0
+}
+
+.containerCorreo{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0
+}
+
+.containerContraseña{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    padding: 10px 0
+}
+
+.contraseña{
+    width: 50%;
+}
+
+.menuDesplegable{
+    width: 50%;
+}
+
+.containerMensaje{
+    width: 100%;
+    padding: 10px 0
+}
+
+.containerBoton{
+    display: flex;
+    justify-content: space-between;
+}
