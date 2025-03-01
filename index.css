@@ -13,7 +13,7 @@ body{
 }
 
 header{
-    border: 1px solid #493c2b24;
+    border: 1px solid #dadada;
     padding: 35px 40px; 
     margin: 40px; 
     border-radius: 100px; 
@@ -24,7 +24,7 @@ header{
 }
 
 .boton{
-    border: 1px solid #493c2b24;
+    border: 1px solid #dadada;
     color: #f57a47;
     padding: 13px 32px;
     cursor: pointer;
@@ -159,15 +159,10 @@ nav a:hover{
     text-align: center;
 }
 
-.card i{
+.iconCard{
     font-size: 40px;
     margin-bottom: 40px;
     margin-top: 40px;
-}
-
-.card i:hover{
-    color: #ecf007;
-
 }
 
 .card h3{
@@ -176,14 +171,27 @@ nav a:hover{
 
 .card p{
     margin-bottom: 40px;
+    width: 100%;
+    height: 50px;
 }
 
-.enlace{
+.card .enlace{
     margin-top: 40px;
     color: #f57a47;
     text-decoration: none;
     font-weight: 600;
     align-content: start;
+}
+
+.flecha{
+    font-size: 15px;
+    transition: transform 0.3s ease; 
+}
+
+.flecha:hover{
+    font-size: 15px;
+    transform: scale(1.5); 
+    padding-left: 5px;
 }
 
 .cardsNoticias{
@@ -230,4 +238,16 @@ nav a:hover{
     text-decoration: none;
     cursor: pointer;
     border-radius: 10px;
+}
+
+.flechaCard{
+    padding-left: 8px;
+    font-size: 15px;
+    transition: transform 0.3s ease; 
+}
+
+.flechaCard:hover{
+    font-size: 15px;
+    transform: scale(1.5); 
+    padding-left: 8px;
 }

@@ -15,7 +15,7 @@ body{
     max-width: 650px;
     margin: auto;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 40px;
     margin-top: 50px;
     border-radius: 20px;
 }
@@ -23,7 +23,25 @@ body{
 .containerTitulo{
     display: flex;
     justify-content: space-between;
-    padding: 10px 0
+    padding: 10px 0;
+    align-items: center;
+}
+
+.linea{
+    border: none;
+    height: 1px;
+    background-color: #ababab;
+    margin-top: 10px;
+}
+
+.usuario{
+    border: #282d4d;
+}
+
+.InicioSesion{
+    text-decoration: none;
+    font-size: 10px;
+    color: #f57a47;
 }
 
 input, select, textarea {
@@ -31,6 +49,13 @@ input, select, textarea {
     border-radius: 5px;
     padding: 10px;
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.mensaje textarea{
+    outline: none;
 }
 
 textarea::placeholder {
@@ -38,15 +63,29 @@ textarea::placeholder {
     padding: 10px;
 }
 
+.menuDesplegable select{
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input:hover, select:hover, textarea:hover {
+    border: 1px solid #ababab; 
+}
+
 .containerPerfil{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px 0
+    padding: 10px 0;
+    gap: 20px;
 }
 
-.usuario{
-    padding-right: 10px;
+.usuario img{
+    border: 2px solid #282d4d;
+    border-radius: 100px;
+    padding: 3px;
 }
 
 .icono{
@@ -94,4 +133,27 @@ textarea::placeholder {
 .containerBoton{
     display: flex;
     justify-content: space-between;
+    padding: 10px 0;;
+}
+
+.terminosYCondiciones{
+    font-size: 10px;
+    color: #282d4d;
+}
+
+.botonRegistro{
+    background-color: #f57a47;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.botonRegistro:hover{
+    color: #ffffff;
+    background-color: #ecf007;
+    border-radius: 10px;
 }
