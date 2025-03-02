@@ -35,7 +35,7 @@ input{
     width: 85%;
     height: 30px;
     margin-bottom: 10px;
-    border-bottom: 1px solid gray;
+    border-radius: 1px solid gray;
 }
 #espacio{
     margin-bottom: 50px;
