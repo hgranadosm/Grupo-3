@@ -157,3 +157,12 @@ input:hover, select:hover, textarea:hover {
     background-color: #ecf007;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 992px) {
+    .containerNombre, .containerCorreo{
+        flex-direction: column;
+    }
+    .nombre, .primerApellido, .segundoApellido, .correo, .Identificacion, .telefono {
+        margin-bottom: 10px;
+    }
+}

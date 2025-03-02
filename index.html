@@ -15,15 +15,24 @@
 
 <body>
     <header>
-        <img class="logo" src="./img/LogoMuni.png" alt="">
-        <nav class="menuHeader">
-            <a href="#">Servicios<span></span></a>
-            <a href="#">Noticias<span></span></a>
-            <a href="#">Avisos<span></span></a>
-            <a href="#">Denuncias<span></span></a>
-            <a class="boton" href="./registroDeUsuario.html">Regístrate</a>
-            <a class="boton" href="#">Inicia sesión</a>
-        </nav>
+        <div class="contenedorHeader">
+            <div class="logoContentedor">
+                <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <nav class="menuHeader opciones">
+                <a href="#">Servicios<span></span></a>
+                <a href="#">Noticias<span></span></a>
+                <a href="#">Avisos<span></span></a>
+                <a href="#">Denuncias<span></span></a>
+                <a class="boton" href="./registroDeUsuario.html">Regístrate</a>
+                <a class="boton" href="./inicioSesion.html">Inicia sesión</a>
+            </nav>
+        </div>
     </header>
 
     <div class="containerInicio">
@@ -37,7 +46,8 @@
 
     <div class="container2">
         <div class="columnaImagen">
-            <img src="./img/alianza.webp" alt="">
+            <img class="movilCopImagen" src="./img/cooperacion.png" alt="">
+            <img class="escritorioCopImagen" src="./img/alianza.webp" alt="">
         </div>
 
         <div class="columnaTexto">
@@ -56,113 +66,132 @@
         <div class="texto3">
             <p>Facilitamos tu interacción con la municipalidad. Accede de forma rápida a los servicios más importantes para reportar problemas, realizar trámites, consultar noticias o conocer los eventos locales.</p>
         </div>
-    </div>
-
-
-    <div class="contenedoresPequeños">
-        <div class="card1">
-            <div>
-                <img src="" alt="">
+        <div class="cards">
+            <div class="card">
+                <i class="iconCard fas fa-exclamation-triangle"></i>
+                <h3>Reportar Problemas</h3>
+                <p class="descripcion">Reporta baches, basura, alumbrado y otros inconvenientes</p>
+                <a class="enlace" href="#">Más información <i class="flecha fa-solid fa-arrow-right"></i></a>
             </div>
-            <div>
-
+    
+            <div class="card">
+                <i class="iconCard fas fa-file-alt"></i>
+                <h3>Trámites y servicos</h3>
+                <p>Accede a permisos, impuestos municipales y más</p>
+                <a class="enlace" href="#">Más información <i class="flecha fa-solid fa-arrow-right"></i></a>
+            </div>
+    
+            <div class="card">
+                <i class="iconCard fas fa-newspaper"></i>
+                <h3>Noticias y Avisos</h3>
+                <p>Mantente informado con las últimas noticias y anuncios</p>
+                <a class="enlace" href="#">Más información <i class="flecha fa-solid fa-arrow-right"></i></a>
+            </div>
+    
+            <div class="card">
+                <i class="iconCard fas fa-file-alt"></i>
+                <h3>Eventos Locales</h3>
+                <p>Consulta la agenda de eventos y actividades en la comunidad</p>
+                <a class="enlace" href="#">Más información <i class="flecha fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
 
-    <div class="cards">
-        <div class="card">
-            <i class="iconCard fas fa-exclamation-triangle"></i>
-            <h3>Reportar Problemas</h3>
-            <p class="descripcion">Reporta baches, basura, alumbrado y otros inconvenientes</p>
-            <a class="enlace" href="#">Más información <i class="flecha fa-solid fa-arrow-right"></i></a>
-        </div>
-
-        <div class="card">
-            <i class="iconCard fas fa-file-alt"></i>
-            <h3>Trámites y servicos</h3>
-            <p>Accede a permisos, impuestos municipales y más</p>
-            <a class="enlace" href="#">Más información <i class="flecha fa-solid fa-arrow-right"></i></a>
-        </div>
-
-        <div class="card">
-            <i class="iconCard fas fa-newspaper"></i>
-            <h3>Noticias y Avisos</h3>
-            <p>Mantente informado con las últimas noticias y anuncios</p>
-            <a class="enlace" href="#">Más información <i class="flecha fa-solid fa-arrow-right"></i></a>
-        </div>
-
-        <div class="card">
-            <i class="iconCard fas fa-file-alt"></i>
-            <h3>Eventos Locales</h3>
-            <p>Consulta la agenda de eventos y actividades en la comunidad</p>
-            <a class="enlace" href="#">Más información <i class="flecha fa-solid fa-arrow-right"></i></a>
-        </div>
-    </div>
 
     <!--Testimonios-->
 
-    <div class="container">
+    <div class="containerNoticias">
         <div class="contenedor-titulo">
             <h2 class="titulo">Noticias</h2>
         </div>
         <div class="texto3">
             <p>Manténgase informado con las últimas noticias y avisos de la municipalidad.</p>
         </div>
+        <div class="cardsNoticias">
+            <div class="cardInfo">
+                <div class="cardArriba">
+                    <h3>Feria de la salud 2024</h3>
+                    <p>10 de Enero de 2025</p>
+                </div>
+                <div class="cardAbajo">
+                    <div class="imagenCard">
+                        <img src="./img/Salud.jpg" alt="">
+                    </div>
+                    <a class="botonCard" href="#">Ver más<i class="flechaCard fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+    
+            <div class="cardInfo">
+                <div class="cardArriba">
+                    <h3>Feria de la salud 2024</h3>
+                    <p>10 de Enero de 2025</p>
+                </div>
+                <div class="cardAbajo">
+                    <div class="imagenCard">
+                        <img src="./img/Salud.jpg" alt="">
+                    </div>
+                    <a class="botonCard" href="#">Ver más<i class="flechaCard fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+    
+            <div class="cardInfo">
+                <div class="cardArriba">
+                    <h3>Feria de la salud 2024</h3>
+                    <p>10 de Enero de 2025</p>
+                </div>
+                <div class="cardAbajo">
+                    <div class="imagenCard">
+                        <img src="./img/Salud.jpg" alt="">
+                    </div>
+                    <a class="botonCard" href="#">Ver más<i class="flechaCard fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+    
+            <div class="cardInfo">
+                <div class="cardArriba">
+                    <h3>Feria de la salud 2024</h3>
+                    <p>10 de Enero de 2025</p>
+                </div>
+                <div class="cardAbajo">
+                    <div class="imagenCard">
+                        <img src="./img/Salud.jpg" alt="">
+                    </div>
+                    <a class="botonCard" href="#">Ver más<i class="flechaCard fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+    
+        </div>
     </div>
 
-    <div class="cardsNoticias">
-        <div class="cardInfo">
-            <div class="cardArriba">
-                <p>Feria de la salud 2024</p>
-            </div>
-            <div class="cardAbajo">
-                <div class="imagenCard">
-                    <img src="./img/Salud.jpg" alt="">
-                </div>
-                <a class="botonCard" href="#">Ver más<i class="flechaCard fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="cardInfo">
-            <div class="cardArriba">
-                <p>Feria de la salud 2024</p>
-            </div>
-            <div class="cardAbajo">
-                <div class="imagenCard">
-                    <img src="./img/Salud.jpg" alt="">
-                </div>
-                <a class="botonCard" href="#">Ver más<i class="flechaCard fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="cardInfo">
-            <div class="cardArriba">
-                <p>Feria de la salud 2024</p>
-            </div>
-            <div class="cardAbajo">
-                <div class="imagenCard">
-                    <img src="./img/Salud.jpg" alt="">
-                </div>
-                <a class="botonCard" href="#">Ver más<i class="flechaCard fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="cardInfo">
-            <div class="cardArriba">
-                <p>Feria de la salud 2024</p>
-            </div>
-            <div class="cardAbajo">
-                <div class="imagenCard">
-                    <img src="./img/Salud.jpg" alt="">
-                </div>
-                <a class="botonCard" href="#">Ver más<i class="flechaCard fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-    </div>
 
     <!--Mapas-->
+    <div class="infoContacto">
+        <div class="contacto">
+            <h2 class="tituloContacto">Contáctanos</h2>
+            <div class="horarioContenido">
+                <i class="fa-solid fa-calendar-days"></i>
+                <div>
+                    <h3 class="subTituloContacto">Horario</h3>
+                    <p>Lunes a viernes</p>
+                    <p>8:00 AM - 4:00 PM</p>
+                </div>
+            </div>
+            <div class="telContenido">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h3 class="subTituloContacto">Teléfonos</h3>
+                    <p>2280-5589 / 2280-6034</p>
+                    <p>2280-4751 / 2280-5025</p>
+                    <p>2283-3845 / 2280-4894</p>
+                </div>
+            </div>
+        </div>
+        <div class="contenedorMapa">
+            <iframe class="iframeMapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.0107765639987!2d-84.05513722496974!3d9.933059990168962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e386a01344fb%3A0xa041b8ff3f01b4c4!2sPalacio%20Municipal%20-%20Gobierno%20Local%20de%20Montes%20de%20Oca!5e0!3m2!1ses!2scr!4v1740943319565!5m2!1ses!2scr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
     <footer>
         <div class="contenedorFooter">
             <div class="primeraColumnaFooter">
