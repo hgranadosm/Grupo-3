@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Denuncias.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./img/LogoMuni.png" alt="">
+        <nav class="menuHeader">
+            <a href="#">Servicios<span></span></a>
+            <a href="#">Noticias<span></span></a>
+            <a href="#">Avisos<span></span></a>
+            <a href="#">Denuncias<span></span></a>
+            <a class="boton" href="./registroDeUsuario.html">Regístrate</a>
+            <a class="boton" href="#">Inicia sesión</a>
+        </nav>
+    </header>
+= 
+        <div class="containerInicial">
+            <div class="Denuncias">
+                <h1>Denuncias</h1>
+                <p >Tu voz cuenta. Denuncia y ayuda a construir una comunidad más justa y segura.</p>
+            </div>
+            
+            <div class="contenido">
+                <div class="imagen">
+                    <img class="Denuncia_Imagen" src="img/Denuncia.jpg" alt="Foto_Denuncias">
+                </div>
+                
+                <div class="Indicacion">
+                    <h2 class = titulo>¿Cómo denunciar?</h2>
+                    <p class=" parrrafo">Para realizar una denuncia, por favor completa el formulario que encontrarás a continuación. 
+                        Asegúrate de proporcionar la información detallada sobre el problema que deseas reportar. Una vez enviado, tu denuncia será revisada y procesada por las autoridades correspondientes para tomar las medidas necesarias. Tu colaboración es clave para mejorar nuestra comunidad.</p>
+                </div>
+            </div>
+        </div>
+        <br><br><br> <br> <br> <br>
+        
+        <div class="form-container">
+            <h1>Formulario de Denuncia</h1>
+           
+                <form action="#" method="POST">
+                    <label for="nombre">Nombre Completo:</label>
+                    <br> <br>
+                    <input  type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre completo">
+                    <br> <br>
+        
+                    <label for="email">Correo Electrónico:</label>
+                    <br><br>
+                    <input type="email" id="email" name="email" required placeholder="Escribe tu correo electrónico">
+                    <br> <br>
+        
+                    <label for="telefono">Teléfono:</label>
+                    <br><br>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Escribe tu número de teléfono">
+                    <br><br>
+        
+                    <label for="denuncia">Escribe tu denuncia:</label>
+                    <br><br>
+                    <textarea  id="denuncia" name="denuncia"  placeholder="Escribe aquí tu denuncia detallada" required></textarea>
+                    <br><br>
+        
+                    <div class="checkbox-group">
+                        <label>
+                            <input class = ' Terminos-condiciones' type="checkbox" name="acepto" required> Acepto los términos y condiciones.
+                        </label>
+                        <br>
+                    </div>
+        
+                    <button type="submit">Enviar Denuncia</button>
+                </form>
+           
+        </div>
+    
+    
+</body>
+</html>
+            

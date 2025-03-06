@@ -20,7 +20,7 @@ body{
 
 
 }
-.titulo{
+.containerTitulo{
     width: 100%;
     height: auto;
     display: flex;
@@ -34,23 +34,25 @@ input{
     border-radius: 5px;
     width: 85%;
     height: 30px;
-    margin-bottom: 10px;
     border: 1px solid grey;
+    margin-bottom: 10px;
+
+
 }
 .espacio{
     margin-bottom: 50px;
 }
 input::placeholder{
     font-family: 'Montserrat', sans-serif;
-    color: grey;
     text-indent: 15px;
+    color: grey;
 
-    
 }
 a{
     font-size: 13px;
     text-decoration: none;
-    color: #9b6feb;
+    color: #f57a47;
+
 }
 .containerForm{
     margin-bottom: 50px;
@@ -61,15 +63,19 @@ a{
 #olvidado{
     margin-left: 25px;
 }
-
-button{
-
-    margin-left: 150px;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color:#8d50ff;
+#iniciarSesion{
+    margin-right: 95px;
+    margin-left: 25px;
+}
+.botonContinuar{
+    background-color: #f57a47;
+    color: #ffffff;
     border: none;
-    color: #f1f5f9;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+    margin-left: 150px;
     width: 100px;
     height: 35px;
 }
