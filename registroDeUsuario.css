@@ -99,14 +99,16 @@ input:hover, select:hover, textarea:hover {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 10px 0
+    padding: 10px 0;
+    gap: 10px;
 }
 
 .containerCorreo{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 10px 0
+    padding: 10px 0;
+    gap: 10px;
 }
 
 .containerContraseña{
@@ -114,7 +116,7 @@ input:hover, select:hover, textarea:hover {
     justify-content: space-between;
     width: 100%;
     gap: 10px;
-    padding: 10px 0
+    padding: 10px 0;
 }
 
 .contraseña{

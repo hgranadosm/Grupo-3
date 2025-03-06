@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciativas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./administradorIniciativas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--MENU-->
+    <header>
+        <div class="contenedorHeader">
+            <div class="logoContentedor">
+                <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <nav class="menuHeader opciones">
+                <a href="#">Servicios<span></span></a>
+                <a href="#">Noticias<span></span></a>
+                <a href="#">Avisos<span></span></a>
+                <a href="#">Denuncias<span></span></a>
+                <a class="boton" href="./inicioSesion.html">Cerrar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <!--TABLA-->
+    <h1 class="tituloTabla">Administración de Iniciativas</h1>
+    <table class="contenedorTabla">
+        <tr class="filas">
+            <th class="titulos">#</th>
+            <th class="titulos">Nombre de la Iniciativa</th>
+            <th class="titulos">Descripción</th>
+            <th class="titulos">Propuesto Por</th>
+            <th class="titulos">Acciones</th>
+        </tr>
+
+        <tr>
+            <td class="descripcion">1</td>
+            <td class="descripcion">Reciclaje en parques</td>
+            <td class="descripcion">Implementar puntos de reciclaje en los parques públicos.</td>
+            <td class="descripcion">Consejo de Distrito</td>
+            <td>
+                <button class="boton1">Aprobar</button>
+                <button class="boton2">Rechazar</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="descripcion">2</td>
+            <td class="descripcion">Mejoras en aceras</td>
+            <td class="descripcion">Renovación de aceras en mal estado.</td>
+            <td class="descripcion">Usuario Juan Pérez</td>
+            <td>
+                <button class="boton1">Aprobar</button>
+                <button class="boton2">Rechazar</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="final" colspan="5">Fin de las iniciativas</td>
+        </tr>
+    </table>
+
+
+
+    <!--FOOTER-->
+    <footer>
+        <div class="contenedorFooter">
+            <div class="primeraColumnaFooter">
+                <img class="footerLogo" src="./img/LogoMuniBlanco.png" width="158px" alt="logo municipales">
+                <a href="./inicioSesion.html" class="footerBoton">Iniciar sesión</a>
+                <a href="./registroDeUsuario.html" class="footerBoton">Registro</a>
+            </div>
+            <div class="footerColumna">
+                <a href="">Noticias</a>
+                <a href="">Servicios</a>
+                <a href="">Avisos</a>
+                <a href="">Denuncias</a>
+            </div>
+            <div class="footerColumna redesColumna">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-square-youtube fa-bounce"></i></a>
+            </div>
+        </div>
+        <div class="copyRight">
+            <p>Todos los derechos reservados Municipalidad de Montes de Oca</p>
+        </div>
+    </footer>
+</body>
+
+</html>
