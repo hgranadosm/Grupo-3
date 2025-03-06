@@ -94,7 +94,7 @@ nav a:hover{
 }
 
 .contenedorTabla{
-    width: 85%;
+    width: 90%;
     margin: auto;
     background-color: #ffffff;
     border: 1px solid #493c2b24;
@@ -153,6 +153,15 @@ nav a:hover{
     font-weight: bold;
     padding: 10px;
 }
+
+.contenedorBotones{
+    width: 208px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
 /* --------------------- FOOTER --------------------- */
 
 footer {
