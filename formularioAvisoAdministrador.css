@@ -6,13 +6,11 @@
 
 
 body{
-    background-color: #f1f5f9;
+    background-color: #ffffff;
     color: #282d4d;
     margin: auto;
     font-family: 'Montserrat', sans-serif;
 }
-
-/* --------------------- MENU --------------------- */
 
 header{
     position: fixed;
@@ -82,121 +80,135 @@ nav a:hover{
     border-radius: 100px;
 }
 
-/* --------------------- SERVICIOS --------------------- */
 
-.container{
-    text-align: center;
-    padding: 100px 14%;
-    text-align: center;
-    padding: 40px 5%;
-    margin-top: 5px;
-}
-
-.titulo{
-    font-size: 40px;
-    margin-bottom: 20px;
-    line-height: 1;
-    margin-top: 200px;
-    text-align: center;
-}
+/* Formulario */
 
 
-.texto3{
+.containerPadre{
+    max-width: 650px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 40px;
     margin-top: 50px;
-    font-size: 1.15em;
-    font-weight: 400;
-    margin-bottom: 48px;
+    border-radius: 20px;
+    margin-top: 150px;
 }
 
-.contenedor-titulo {
-    position: relative;
-}
-
-.contenedorBoton{
-    margin-bottom: 48px;
-}
-
-.iniciativaBoton{
-    border: 1px solid #f57a47;
-    color: #f57a47;
-    padding: 9px 19px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: .5s;
-    max-width: 151px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s all ease;
-    text-align: center;
-}
-
-.iniciativaBoton:hover {
-    color: #ffff;
-    background-color: #f57a47;
-    transition: 1s all ease;
-}
-
-.cards{
+.containerTituloImagen{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    gap: 20px;
-    background: #f1f5f9;
-}
-
-.card{
-    width: 21%;
-    background-color: #f1f5f9;
-    border: 1px solid #493c2b24;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    min-width: 264px;
-}
-
-.iconCard{
-    font-size: 40px;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    border-radius: 50px;
-    background: #f57a47;
-    color: white;
-    font-size: 20px;
-    height: 55px;
-    width: 55px;
-    text-align: center;
-    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
     align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.card h3{
-    margin-bottom: 40px;
-    height: 60px;
+.linea{
+    border: none;
+    height: 1px;
+    background-color: #ababab;
+    margin-top: 10px;
 }
 
-.card .enlace{
-    margin-top: 40px;
-    color: #f57a47;
+.usuario{
+    border: #282d4d;
+}
+
+.InicioSesion{
     text-decoration: none;
-    font-weight: 600;
-    align-content: start;
+    font-size: 10px;
+    color: #f57a47;
 }
 
-.flecha{
+input, select, textarea {
+    border: 1px solid #493c2b24;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.mensaje textarea{
+    outline: none;
+}
+
+textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
+
+.menuDesplegable select{
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input:hover, select:hover, textarea:hover {
+    border: 1px solid #ababab; 
+}
+
+.containerPerfil{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.usuario img{
+    border: 2px solid #282d4d;
+    border-radius: 100px;
+    padding: 3px;
+}
+
+.containerNombre{
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.containerNombreIniciativa{
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+
+.containerMensaje{
+    width: 100%;
+    padding: 10px 0
+}
+
+.containerBoton{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;;
+}
+
+.terminosYCondiciones{
+    font-size: 10px;
+    color: #282d4d;
+}
+
+.botonRegistro{
+    background-color: #f57a47;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
     font-size: 15px;
-    transition: transform 0.3s ease; 
+    transition:  0.5s all ease;
 }
 
-.flecha:hover{
-    font-size: 15px;
-    transform: scale(1.5); 
-    padding-left: 5px;
+.botonRegistro:hover{
+    color: #ffffff;
+    background-color: #f7c63f;
+    border-radius: 10px;
 }
-
 
 /* --------------------- FOOTER --------------------- */
 
@@ -287,14 +299,15 @@ footer {
 }
 
 
+
 /* --------------------- MEDIA QUARIES --------------------- */
+
 
 /* ------ Menú ------ */
 
 #check{
     display: none;
 }
-
 .checkbtn{
     font-size: 30px;
     float: right;
@@ -376,6 +389,16 @@ footer {
 }
 
 
+/* ------ Formulario ------ */
+@media screen and (max-width: 992px) {
+    .containerNombre, .containerCorreo{
+        flex-direction: column;
+    }
+    .nombre, .primerApellido, .segundoApellido, .correo, .Identificacion, .telefono {
+        margin-bottom: 10px;
+    }
+}
+
 /* ------ Footer ------ */
 @media screen and (max-width: 522px) {
     .contenedorFooter {
@@ -391,3 +414,4 @@ footer {
         gap: 10px;
     }
 }
+

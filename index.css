@@ -174,7 +174,7 @@ nav a:hover{
 
 .card{
     width: 21%;
-    height: 100%;
+
     background-color: #f1f5f9;
     border: 1px solid #493c2b24;
     border-radius: 10px;
@@ -203,6 +203,7 @@ nav a:hover{
 
 .card h3{
     margin-bottom: 40px;
+    height: 70px;
 }
 
 .card p{
@@ -212,7 +213,7 @@ nav a:hover{
 }
 
 .card .enlace{
-    margin-top: 40px;
+    margin-bottom: 40px;
     color: #f57a47;
     text-decoration: none;
     font-weight: 600;

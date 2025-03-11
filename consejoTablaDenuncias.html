@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de denuncias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./consejoTablaDenuncias.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+        <!--MENU-->
+    <header>
+        <div class="contenedorHeader">
+            <div class="logoContentedor">
+                <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <nav class="menuHeader opciones">
+                <a href="#">Servicios<span></span></a>
+                <a href="#">Iniciativas<span></span></a>
+                <a href="#">Noticias<span></span></a>
+                <a href="#">Avisos<span></span></a>
+                <a href="#">Denuncias<span></span></a>
+                <a class="boton" href="./inicioSesion.html">Cerrar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <!--TABLA-->
+
+    <div class="containerTituloBoton">
+        <h3 class="tituloTabla">Administración de Denuncias</h3>
+        <div class="contenedorBoton">
+            <a href="#" class="denunciaBoton">Crea tu denuncia</a>
+        </div>
+    </div>
+    
+    <div class="contenedorTablaResponsive">
+        <table class="contenedorTabla">
+            <tr class="filas">
+                <th class="titulosId">#</th>
+                <th class="titulos">Nombre de la denuncia</th>
+                <th class="titulos">Descripción</th>
+                <th class="titulos">Propuesto Por</th>
+                <th class="titulos">Estatus</th>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">1</td>
+                <td class="descripcion">Huecos en la calle principal de Sabanilla</td>
+                <td class="descripcion">Hay varios baches profundos en la calle frente al supermercado La Canasta, dificultando el tránsito y dañando vehículos.</td>
+                <td class="descripcion">Usuario María González</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">2</td>
+                <td class="descripcion">Alumbrado público apagado en el Parque de San Pedro</td>
+                <td class="descripcion">Las lámparas del parque están apagadas desde hace una semana, lo que genera inseguridad en horas de la noche.</td>
+                <td class="descripcion">Usuario Jorge Ramírez</td>
+                <td class="status">
+                    <p class="aprobado">Aprobado</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">3</td>
+                <td class="descripcion">Basura acumulada en la acera de Barrio Dent</td>
+                <td class="descripcion">Se observa un cúmulo de bolsas de basura sin recoger durante más de tres días, atrayendo animales y malos olores.</td>
+                <td class="descripcion">Usuario Laura Rodríguez</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">4</td>
+                <td class="descripcion">Ruido excesivo en bar Los Amigos</td>
+                <td class="descripcion">El bar mantiene música en alto volumen hasta después de la medianoche, afectando el descanso de los vecinos.</td>
+                <td class="descripcion">Usuario Andrés Solano</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">5</td>
+                <td class="descripcion">Quema ilegal de basura en la Calle Las Rosas</td>
+                <td class="descripcion">Se realizan quemas de desechos en el terreno baldío frente al número 45, generando humo y contaminación.</td>
+                <td class="descripcion">Usuario Patricia Méndez</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">6</td>
+                <td class="descripcion">Fuga de agua en la acera de la Calle La Cruz</td>
+                <td class="descripcion">Hay una fuga constante de agua potable saliendo de la acera, provocando encharcamientos y deterioro del pavimento.</td>
+                <td class="descripcion">Usuario Sergio López</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">7</td>
+                <td class="descripcion">Señal de alto caída en Barrio Los Yoses</td>
+                <td class="descripcion">La señal de tránsito de alto en la esquina de la escuela fue derribada y no ha sido reparada, generando riesgo de accidentes.</td>
+                <td class="descripcion">Usuario Carolina Herrera</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">8</td>
+                <td class="descripcion">Parque sin mantenimiento en Lourdes de Montes de Oca</td>
+                <td class="descripcion">Los juegos infantiles están oxidados y algunos bancos rotos, lo que representa un peligro para los niños que visitan el parque.</td>
+                <td class="descripcion">Usuario David Monge</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">9</td>
+                <td class="descripcion">Construcción sin permisos en Avenida Central</td>
+                <td class="descripcion">Se está realizando una ampliación en una vivienda sin los permisos visibles y genera obstrucción de la vía pública por los materiales de construcción.</td>
+                <td class="descripcion">Usuario Ana María Chacón</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">10</td>
+                <td class="descripcion">Obstrucción de aceras en Barrio Escalante</td>
+                <td class="descripcion">Un comercio deja sus cajas de productos sobre la acera durante todo el día, impidiendo el paso de peatones.</td>
+                <td class="descripcion">Usuario Mauricio Aguilar</td>
+                <td class="status">
+                    <p class="rechazado">Rechazado</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">11</td>
+                <td class="descripcion">Árbol en riesgo de caer en Calle Los Pinos</td>
+                <td class="descripcion">Hay un árbol grande inclinado que podría caer sobre la calle y casas cercanas, especialmente en época de lluvias.</td>
+                <td class="descripcion">Usuario Gabriela Vargas</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">12</td>
+                <td class="descripcion">Puente peatonal en mal estado en Barrio Dent</td>
+                <td class="descripcion">El puente peatonal tiene las barandas sueltas y varios tablones rotos, lo que representa un peligro para quienes lo cruzan a diario.</td>
+                <td class="descripcion">Usuario Francisco Valverde</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">13</td>
+                <td class="descripcion">Falta de rampas para discapacitados en la Biblioteca Municipal</td>
+                <td class="descripcion">La entrada principal carece de rampa de acceso, dificultando el ingreso de personas con movilidad reducida.</td>
+                <td class="descripcion">Usuario Silvia Navarro</td>
+                <td class="status">
+                    <p class="aprobado">Aprobado</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">14</td>
+                <td class="descripcion">Abandono de perros en el parque de Vargas Araya</td>
+                <td class="descripcion">Se han visto varios perros abandonados en el parque, sin atención ni alimentos, generando preocupación en los vecinos.</td>
+                <td class="descripcion">Usuario Esteban Rodríguez</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">15</td>
+                <td class="descripcion">Carros estacionados sobre la acera en Calle El Ciprés</td>
+                <td class="descripcion">Varias personas dejan sus vehículos sobre las aceras, obligando a los peatones a caminar por la calle.</td>
+                <td class="descripcion">Usuario Alejandra Salas</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">16</td>
+                <td class="descripcion">Aguas negras vertidas en la quebrada El Rodeo</td>
+                <td class="descripcion">Hay una descarga ilegal de aguas residuales en la quebrada, provocando malos olores y contaminación.</td>
+                <td class="descripcion">Usuario Jonathan Méndez</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">17</td>
+                <td class="descripcion">Mal estado del cementerio municipal de San Pedro</td>
+                <td class="descripcion">Las áreas verdes están descuidadas, hay basura y varias tumbas presentan daños visibles sin mantenimiento alguno.</td>
+                <td class="descripcion">Usuario Sofía Camacho</td>
+                <td class="status">
+                    <p class="rechazado">Rechazado</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">18</td>
+                <td class="descripcion">Luminarias parpadeando en la Avenida 10</td>
+                <td class="descripcion">Varias luminarias parpadean constantemente durante la noche, dificultando la visibilidad para los peatones y conductores.</td>
+                <td class="descripcion">Usuario Ricardo Quesada</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">19</td>
+                <td class="descripcion">Grafitis vandálicos en el edificio municipal</td>
+                <td class="descripcion">Aparecieron grafitis ofensivos en las paredes externas del edificio municipal durante el fin de semana.</td>
+                <td class="descripcion">Usuario Natalia Jiménez</td>
+                <td class="status">
+                    <p>En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">20</td>
+                <td class="descripcion">Venta de licor sin permisos en feria comunal</td>
+                <td class="descripcion">Un puesto en la feria de los sábados vende bebidas alcohólicas sin contar con los permisos legales correspondientes.</td>
+                <td class="descripcion">Usuario Daniel Pacheco</td>
+                <td class="status">
+                    <p class="statusRevision">En revisión</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="final" colspan="5">Fin de las denuncias</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <!--FOOTER-->
+    <footer>
+        <div class="contenedorFooter">
+            <div class="primeraColumnaFooter">
+                <img class="footerLogo" src="./img/LogoMuniBlanco.png" width="158px" alt="logo municipales">
+                <a href="./inicioSesion.html" class="footerBoton">Iniciar sesión</a>
+                <a href="./registroDeUsuario.html" class="footerBoton">Registro</a>
+            </div>
+            <div class="footerColumna">
+                <a href="">Noticias</a>
+                <a href="">Servicios</a>
+                <a href="">Avisos</a>
+                <a href="">Denuncias</a>
+            </div>
+            <div class="footerColumna redesColumna">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-square-youtube fa-bounce"></i></a>
+            </div>
+        </div>
+        <div class="copyRight">
+            <p>Todos los derechos reservados Municipalidad de Montes de Oca</p>
+        </div>
+    </footer>
+</body>
+
+</html>

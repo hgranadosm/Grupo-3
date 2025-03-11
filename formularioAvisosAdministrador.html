@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Perfil</title>
+    <title>Formulario Iniciativa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="./actualizarPerfil.css">
+    <link rel="stylesheet" type="text/css" href="./formularioAvisoAdministrador.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -36,74 +36,35 @@
     </header>
 
     <div class="containerPadre">
-        <div class="containerTitulo">
-            <h3 class="tituloRegistro">Editar Perfil</h3>
+        <div class="containerTituloImagen">
+            <h3 class="tituloRegistro">Creación de Aviso</h3>
         </div>
 
-        <div class="containerPerfil">
-            <div class="usuario">
-                <img src="./img/perfil.png" alt="">
-            </div>
-            <div class="icono">
-                <i class="fa-solid fa-image"></i>
-            </div>
-        </div>
 
         <div class="contenedorFormulario">
+            <div class="containerNombreIniciativa">
+                <div class="nombreIniciativa">
+                    <input type="text" name="nombre" placeholder="Título">
+                </div>
+            </div>
+
             <div class="containerNombre">
                 <div class="nombre">
-                    <input type="text" name="nombre" placeholder="Nombre">
-                </div>
-
-                <div class="primerApellido">
-                    <input type="text" name="apellido1" placeholder="Primer Apellido">
-                </div>
-
-                <div class="segundoApellido">
-                    <input type="text" name="apellido2" placeholder="Segundo Apellido">
-                </div>
-            </div>
-
-            <div class="containerCorreo">
-                <div class="correo">
-                    <input type="email" name="correo" placeholder="Correo">
-                </div>
-
-                <div class="Identificacion">
-                    <input type="text" name="identificacion" placeholder="Identificacion">
-                </div>
-
-                <div class="telefono">
-                    <input type="tel" name="telefono" placeholder="Teléfono">
-                </div>
-            </div>
-
-            <div class="containerContraseña">
-                <div class="contraseña">
-                    <input type="password" name="contraseña" placeholder="Contraseña">
-                </div>
-
-                <div class="menuDesplegable">
-                    <select name="distritos" id="distritos">
-                        <option value="#" selected disabled>Distrito</option>
-                        <option value="San Pedro">San Pedro</option>
-                        <option value="Sabanilla">Sabanilla</option>
-                        <option value="Mercedes">Mercedes</option>
-                        <option value="San Rafael">San Rafael</option>
-                    </select>
+                    <input type="text" name="nombre" placeholder="Fecha de publicación">
                 </div>
             </div>
 
             <div class="containerMensaje">
                 <div class="mensaje">
-                    <textarea rows="10" name="mensaje" id="mensaje" placeholder="Detalles Adicionales"></textarea>
+                    <textarea rows="10" name="mensaje" id="mensaje" placeholder="Descripción"></textarea>
                 </div>
             </div>
+
         </div>
 
         <div class="containerBoton">
             <div>
-                <button class="botonRegistro" type="button">Guardar Cambios</button>
+                <button class="botonRegistro" type="button">Crear Aviso</button>
             </div>
         </div>
     </div>

@@ -225,12 +225,12 @@ input:hover, select:hover, textarea:hover {
     border-radius: 10px;
     cursor: pointer;
     font-size: 15px;
-    transition: .3s;
+    transition: 0.5s all ease;
 }
 
 .botonRegistro:hover{
     color: #ffffff;
-    background-color: #ecf007;
+    background-color: #f7c63f;
     border-radius: 10px;
 }
 
