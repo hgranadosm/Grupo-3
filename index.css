@@ -86,14 +86,14 @@ nav a:hover{
 }
 
 .tituloPrincipal{
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 20px;
     line-height: 1;
-    margin-top: 220px;
+    margin-top: 180px;
 }
 
 .texto{
-    padding-top: 40px;
+    padding-top: 40px; 
     font-size: 1.15em;
     font-weight: 400;
     margin-bottom: 100px;
