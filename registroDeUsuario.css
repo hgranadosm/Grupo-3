@@ -27,13 +27,6 @@ body{
     align-items: center;
 }
 
-.linea{
-    border: none;
-    height: 1px;
-    background-color: #ababab;
-    margin-top: 10px;
-}
-
 .usuario{
     border: #282d4d;
 }
