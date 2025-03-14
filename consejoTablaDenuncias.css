@@ -168,7 +168,7 @@ nav a:hover{
 
 }
 
-p{
+.status p{
     background-color: rgb(240, 240, 240);
     color: #a0a0a0;
     padding: 4px 5px;
