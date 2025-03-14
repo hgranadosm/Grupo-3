@@ -100,6 +100,7 @@ nav a:hover{
     margin-bottom: 15px;
     border: 3px solid #282d4d;
     padding: 3px;
+    cursor: pointer;
 }
 
 h2 {
