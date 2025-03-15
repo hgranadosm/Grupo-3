@@ -14,15 +14,17 @@ body{
 
 /* --------------------- MENU --------------------- */
 
+/* --------------------- MENU --------------------- */
+
 header{
     position: fixed;
     z-index: 1;
     left: 0px;
     right: 0px;
     margin: auto;
-    top: 38px;
-    padding: 0px 5%;
-
+    top: 0px;
+    padding: 38px 5% 0px 5%;
+    background: inherit;
 }
 
 .contenedorHeader {
@@ -40,6 +42,7 @@ header{
 .logoContentedor {
     display: flex;
     align-items: center;
+    flex: 1;
 }
 
 .boton{
@@ -50,6 +53,7 @@ header{
     margin-left: 23px;
     border-radius: 10px;
     transition: .5s;
+    font-size: 0.8rem;
 }
 
 .boton:hover{
@@ -66,7 +70,7 @@ header{
     height: 35px;
 }
 
-nav a{
+nav .menuEnlace{
     position: relative;
     font-size: 0.8rem;
     font-weight: 500;
@@ -76,12 +80,27 @@ nav a{
     transition: .3s;
 }
 
-nav a:hover{
+nav .menuEnlace:hover{
     color: #ffffff;
     background-color: #ecf007;
     border-radius: 100px;
 }
 
+
+.menuIconoEnlace{
+    text-decoration: none;
+    padding: 3px 10px;
+}
+
+.iconoMenu {
+    color: #f57a47;
+    transition: .3s;
+}
+
+.iconoMenu:hover {
+    color:  #ecf007;
+    background-color: none;
+}
 
 /* --------------------- CONTENIDO --------------------- */
 
@@ -175,7 +194,7 @@ footer {
     align-items: flex-start;
     justify-content: center;
     flex-grow: 1;
-    border-left: 1px solid #5e5e5e;
+    border-left: 1px solid #783e28;
     max-height: 300px;
     padding: 30px 0px 30px 35px;
 }
@@ -244,7 +263,7 @@ footer {
     order: 1;
     display: none;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1030px) {
     .checkbtn{
         display: block;
     }
@@ -271,7 +290,7 @@ footer {
         left: 0;
     }
     header {
-        top: 14px;
+        padding-top: 14px;
     }
     .contacto {
         padding-left: 0px;

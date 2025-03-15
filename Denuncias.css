@@ -37,6 +37,7 @@ body{
         margin-left: 23px;
         border-radius: 10px;
         transition: .5s;
+        font-size: 0.8rem;
     }
     
     .boton:hover{
