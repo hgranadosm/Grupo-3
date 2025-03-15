@@ -197,13 +197,13 @@ nav .menuEnlace:hover{
 }
 
 .aprobado{
-    background-color: rgb(4, 182, 4);
-    color: #ffffff;
+    background-color: rgb(4, 182, 4) !important;
+    color: #ffffff  !important;
 }
 
 .rechazado{
-    background-color: rgb(203, 5, 5);
-    color: #ffffff;
+    background-color: rgb(203, 5, 5)  !important;
+    color: #ffffff  !important;
 }
 
 .contenedorTablaResponsive{
