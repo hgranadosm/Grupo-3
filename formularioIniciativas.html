@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Iniciativa</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="./formularioIniciativas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,10 +32,10 @@
                 <a class="menuEnlace" href="#">Noticias</a>
                 <a class="menuEnlace" href="#">Avisos</a>
                 <a class="menuEnlace" href="#">Denuncias</a>
-                <a class="menuIconoEnlace" href="./actualizarPerfil.html">
+                <a class="menuIconoEnlace" href="./editarPerfil.html">
                     <i class="iconoMenu fa-solid fa-user"></i>                
                 </a>
-                <span class="boton" href="./inicioSesion.html">Cerrar sesión</span>
+                <a class="boton" href="./inicioSesion.html">Cerrar sesión</a>
             </nav>
         </div>
     </header>
@@ -42,38 +43,46 @@
     <div class="containerPadre">
         <div class="containerTituloImagen">
             <h3 class="tituloRegistro">Formulario Iniciativa</h3>
-            <div class="icono">
-                <i class="fa-solid fa-image"></i>
-            </div>
         </div>
 
+        <form action="" class="formulario" id="formulario">
+            <div class="contenedorFormulario">
 
-        <div class="contenedorFormulario">
-            <div class="containerNombreIniciativa">
-                <div class="nombreIniciativa">
-                    <input type="text" name="nombre" placeholder="Nombre de la iniciativa">
+                <!-- Grupo -->
+                <div class="formularioGrupo containerTitulo" id="grupotitulo">
+                    <input type="text" class="formularioInput" name="titulo" id="titulo" placeholder="Nombre de la iniciativa">
+                    <i class='bx formularioValidacion-estado'></i>
+                    <p class="formularioInput-error">Debe agregar un título para la iniciativa</p>
+                </div>
+
+                <div class="formularioGrupo containernombre" id="gruponombre">
+                    <input type="text" class="formularioInput" name="nombre" id="nombre" placeholder="Propuesto por:">
+                    <i class='bx formularioValidacion-estado'></i>
+                    <p class="formularioInput-error">Debe agregar por quién es propuesto</p>
+                </div>
+
+                <div class="formularioGrupo containerDescripcion" id="grupodescripcion">
+                    <textarea rows="10" class="formularioInput" name="descripcion" id="descripcion" placeholder="Descripción"></textarea>
+                    <i class='bx formularioValidacion-estado'></i>
+                    <p class="formularioInput-error">Debe agregar una descripción. Máximo de 300 caracteres y sin carateres especiales como @, #, $, %, &, *</p>
                 </div>
             </div>
 
-            <div class="containerNombre">
-                <div class="nombre">
-                    <input type="text" name="nombre" placeholder="Propuesto por:">
+            <div class="containerBoton">
+
+                <div class="containerBoton">
+                    <button type="submit" class="botonRegistro">Crear Iniciativa</button>
+                </div>
+
+                <div class="formularioCamposRequeridos" id="formularioCamposRequeridos">
+                    <p><b>Por favor completa todos los campos</b></p>
+                </div>
+
+                <div class="formularioMensaje-exito" id="formularioMensaje-exito">
+                    <p><b>¡Tu iniciativa se ha creado con éxito!</b></p>
                 </div>
             </div>
-
-            <div class="containerMensaje">
-                <div class="mensaje">
-                    <textarea rows="10" name="mensaje" id="mensaje" placeholder="Descripción"></textarea>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="containerBoton">
-            <div>
-                <button class="botonRegistro" type="button">Crear Iniciativa</button>
-            </div>
-        </div>
+        </form>
     </div>
 
 
@@ -100,6 +109,8 @@
             <p>Todos los derechos reservados Municipalidad de Montes de Oca</p>
         </div>
     </footer>
+
+    <script src="./javascript/formularioIniciativas.js"></script>
 </body>
 
 </html>

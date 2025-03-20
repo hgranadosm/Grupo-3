@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de usuario</title>
+    <title>Editar Perfil</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./registroDeUsuario.css">
+
+    <link rel="stylesheet" href="./editarPerfil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +16,35 @@
 </head>
 
 <body>
+
+    <header>
+        <div class="contenedorHeader">
+            <div class="logoContentedor">
+                <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <nav class="menuHeader opciones">
+                <a class="menuEnlace" href="./paginaServicios.html">Servicios</a>
+                <a class="menuEnlace" href="./usuarioIniciativas.html">Iniciativas</a>
+                <a class="menuEnlace" href="#">Noticias</a>
+                <a class="menuEnlace" href="#">Avisos</a>
+                <a class="menuEnlace" href="#">Denuncias</a>
+                <a class="menuIconoEnlace" href="./editarPerfil.html">
+                    <i class="iconoMenu fa-solid fa-user"></i>
+                </a>
+                <a class="boton" href="./inicioSesion.html">Cerrar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+
     <div class="containerPadre">
         <div class="containerTitulo">
-            <h3 class="tituloRegistro">Registro De Usuario</h3>
-            <a class="InicioSesion" href="./inicioSesion.html">Iniciar Sesión</a>
+            <h3 class="tituloRegistro">Editar Perfil</h3>
         </div>
 
         <div class="containerPerfil">
@@ -118,29 +144,53 @@
             </div>
 
             <div class="containerBoton">
-                <div class="terminosYCondiciones">
-                    <p>Al registrarse, usted está aceptando <br>
-                        nuestras Condiciones de servicio y Política de privacidad.
-                    </p>
-                </div>
 
                 <div class="containerBoton">
-                    <button type="submit" class="botonRegistro">Enviar</button>
+                    <button type="submit" class="botonRegistro">Guardar Cambios </button>
                 </div>
-            </div>
 
-            <div class="formularioCamposRequeridos" id="formularioCamposRequeridos">
-                <p><b>Por favor completa correctamente el formulario</b></p>
-            </div>
+                <div class="formularioCamposRequeridos" id="formularioCamposRequeridos">
+                    <p><b>Por favor completa correctamente el formulario</b></p>
+                </div>
 
-            <div class="formularioMensaje-exito" id="formularioMensaje-exito">
-                <p><b>¡Formulario enviado exitosamente!</b></p>
+                <div class="formularioMensaje-exito" id="formularioMensaje-exito">
+                    <p><b>¡Tus cambios se han guardado con éxito!</b></p>
+                </div>
             </div>
 
         </form>
     </div>
 
-    <script src="javascript/registroDeUsuario.js"></script>
+
+    <footer>
+        <div class="contenedorFooter">
+            <div class="primeraColumnaFooter">
+                <img class="footerLogo" src="./img/LogoMuniBlanco.png" width="158px" alt="logo municipales">
+            </div>
+            <div class="footerColumna">
+                <a href="./paginaServicios.html">Servicios</a>
+                <a href="./usuarioIniciativas.html">Iniciativas</a>
+                <a href="">Noticias</a>
+                <a href="">Avisos</a>
+                <a href="">Denuncias</a>
+            </div>
+            <div class="footerColumna redesColumna">
+                <a href="https://www.instagram.com/gobmontesdeoca/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/gobmontesdeoca/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/GobMontesDeOca"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCux4pfOGXArPst7ZyDjxpog"><i
+                        class="fa-brands fa-square-youtube fa-bounce"></i></a>
+            </div>
+        </div>
+        <div class="copyRight">
+            <p>Todos los derechos reservados Municipalidad de Montes de Oca</p>
+        </div>
+    </footer>
+
+
+
+    <script src="javascript/editarPerfil.js"></script>
+
 </body>
 
 </html>

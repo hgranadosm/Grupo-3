@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Avisos</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="./formularioAvisoAdministrador.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,10 +32,10 @@
                 <a class="menuEnlace" href="#">Noticias</a>
                 <a class="menuEnlace" href="./formularioAvisosAdministrador.html">Avisos</a>
                 <a class="menuEnlace" href="#">Denuncias</a>
-                <a class="menuIconoEnlace" href="./actualizarPerfil.html">
-                    <i class="iconoMenu fa-solid fa-user"></i>                
+                <a class="menuIconoEnlace" href="./editarPerfil.html">
+                    <i class="iconoMenu fa-solid fa-user"></i>
                 </a>
-                <span class="boton" href="./inicioSesion.html">Cerrar sesión</span>
+                <a class="boton" href="./inicioSesion.html">Cerrar sesión</a>
             </nav>
         </div>
     </header>
@@ -44,34 +45,46 @@
             <h3 class="tituloRegistro">Creación de Aviso</h3>
         </div>
 
+        <form action="" class="formulario" id="formulario">
+            <div class="contenedorFormulario">
 
-        <div class="contenedorFormulario">
-            <div class="containerNombreIniciativa">
-                <div class="nombreIniciativa">
-                    <input type="text" name="nombre" placeholder="Título">
+                <!-- Grupo -->
+                <div class="formularioGrupo containerTitulo" id="grupotitulo">
+                    <input type="text" class="formularioInput" name="titulo" id="titulo" placeholder="Título">
+                    <i class='bx formularioValidacion-estado'></i>
+                    <p class="formularioInput-error">Debe agregar un título</p>
+                </div>
+
+                <div class="formularioGrupo containerFecha" id="grupofecha">
+                    <input type="date" class="formularioInput" name="fecha" id="fecha" placeholder="Fecha de publicación">
+                    <i class='bx formularioValidacion-estado'></i>
+                    <p class="formularioInput-error">Debe agregar una fecha válida</p>
+                </div>
+
+                <div class="formularioGrupo containerDescripcion" id="grupodescripcion">
+                    <textarea rows="10" class="formularioInput" name="descripcion" id="descripcion" placeholder="Descripción"></textarea>
+                    <i class='bx formularioValidacion-estado'></i>
+                    <p class="formularioInput-error">Debe agregar una descripción. Máximo de 300 caracteres y sin carateres especiales como @, #, $, %, &, </p>
                 </div>
             </div>
 
-            <div class="containerNombre">
-                <div class="nombre">
-                    <input type="text" name="nombre" placeholder="Fecha de publicación">
+            <div class="containerBoton">
+
+                <div class="containerBoton">
+                    <button type="submit" class="botonRegistro">Crear Aviso</button>
+                </div>
+
+                <div class="formularioCamposRequeridos" id="formularioCamposRequeridos">
+                    <p><b>Por favor completa todos los campos</b></p>
+                </div>
+
+                <div class="formularioMensaje-exito" id="formularioMensaje-exito">
+                    <p><b>¡Tu aviso se ha creado con éxito!</b></p>
                 </div>
             </div>
-
-            <div class="containerMensaje">
-                <div class="mensaje">
-                    <textarea rows="10" name="mensaje" id="mensaje" placeholder="Descripción"></textarea>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="containerBoton">
-            <div>
-                <button class="botonRegistro" type="button">Crear Aviso</button>
-            </div>
-        </div>
+        </form>
     </div>
+
 
 
     <footer>
@@ -90,13 +103,16 @@
                 <a href="https://www.instagram.com/gobmontesdeoca/"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.facebook.com/gobmontesdeoca/"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://twitter.com/GobMontesDeOca"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.youtube.com/channel/UCux4pfOGXArPst7ZyDjxpog"><i class="fa-brands fa-square-youtube fa-bounce"></i></a>
+                <a href="https://www.youtube.com/channel/UCux4pfOGXArPst7ZyDjxpog"><i
+                        class="fa-brands fa-square-youtube fa-bounce"></i></a>
             </div>
         </div>
         <div class="copyRight">
             <p>Todos los derechos reservados Municipalidad de Montes de Oca</p>
         </div>
     </footer>
+
+    <script src="./javascript/formularioAvisosAdministrador.js"></script>
 </body>
 
 </html>

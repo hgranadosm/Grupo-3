@@ -51,6 +51,7 @@ header{
     border-radius: 10px;
     transition: .5s;
     font-size: 0.8rem;
+    text-decoration: none;
 }
 
 .boton:hover{
@@ -99,7 +100,7 @@ nav .menuEnlace:hover{
     background-color: none;
 }
 
-/* Formulario */
+/* ----------------------- Formulario -----------------------  */
 
 
 .containerPadre{
@@ -117,13 +118,6 @@ nav .menuEnlace:hover{
     justify-content: space-between;
     padding: 10px 0;
     align-items: center;
-}
-
-.linea{
-    border: none;
-    height: 1px;
-    background-color: #ababab;
-    margin-top: 10px;
 }
 
 .usuario{
@@ -146,13 +140,14 @@ input, select, textarea {
     transition: all 0.3s ease;
 }
 
-.mensaje textarea{
+textarea{
     outline: none;
+    margin-top: 10px;
 }
 
 textarea::placeholder {
+
     font-family: 'Montserrat', sans-serif;
-    padding: 10px;
 }
 
 .menuDesplegable select{
@@ -180,20 +175,19 @@ input:hover, select:hover, textarea:hover {
     padding: 3px;
 }
 
-.containerNombre{
+.containerTitulo{
     justify-content: space-between;
     width: 100%;
     padding: 10px 0;
     gap: 10px;
 }
 
-.containerNombreIniciativa{
+.containerFecha{
     justify-content: space-between;
     width: 100%;
     padding: 10px 0;
     gap: 10px;
 }
-
 
 .containerMensaje{
     width: 100%;
@@ -202,8 +196,8 @@ input:hover, select:hover, textarea:hover {
 
 .containerBoton{
     display: flex;
-    justify-content: space-between;
-    padding: 10px 0;;
+    padding: 5px 20px 0 0;
+    align-items: center;
 }
 
 .terminosYCondiciones{
@@ -227,6 +221,88 @@ input:hover, select:hover, textarea:hover {
     background-color: #f7c63f;
     border-radius: 10px;
 }
+
+.formularioGrupo{
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formularioInput{
+    padding-right: 30px;
+}
+
+.formularioValidacion-estado {
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    color: #ff0000;
+    pointer-events: none; 
+    opacity: 0;
+}
+
+.formularioInput-error{
+    margin-bottom: 10px;
+    font-size: 9px;
+    position: absolute;
+    display: none;
+}
+/*CSS LLAMADO POR EL JS*/
+.formularioInput-error-activo{
+    display: block;
+}
+
+
+.formularioCamposRequeridos{
+    color: #ac0303;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+    display: none;
+}
+/*CSS LLAMADO POR EL JS*/
+.formularioCamposRequeridos-activo{
+    display: block;
+    margin-bottom: 5px;
+
+}
+
+.formularioGrupo-btn-enviar{
+    color: #009b00;
+}
+
+.formularioMensaje-exito{
+    color: #009b00;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+    display: none;
+}
+/*CSS LLAMADO POR EL JS*/
+.formularioMensaje-exito-activo{
+    display: block;
+    margin-bottom: 5px;
+
+}
+
+
+/*------------------- VALIDACIONES ------------------- */
+
+.formularioGrupo-correcto .formularioValidacion-estado{
+    color: #009b00;
+    opacity: 1;
+}
+
+.formularioGrupo-incorrecto .formularioInput{
+    border: 1px solid #ac0303;
+}
+
+.formularioGrupo-incorrecto .formularioValidacion-estado{
+    color:  #ac0303;
+    opacity: 1;
+}
+
 
 /* --------------------- FOOTER --------------------- */
 
