@@ -10,7 +10,6 @@ const expresiones = {
     correo: /^[a-zA-Z0-9\_]+@[a-zA-Z]+\.[a-zA-Z]+$/,
     identificacion: /^\d{9,11}$/,
     telefono: /^\d{8,11}$/,
-    contraseña: /^.{4,12}$/,
     detalle: /^(?=[\s\S]{4,300}$)[a-zA-Z0-9áéíóúÁÉÍÓÚüÜ,.-\s;]+$/,
 };
 
@@ -22,7 +21,6 @@ const campos = {
     correo: false,
     identificacion: false,
     telefono: false,
-    contraseña: false,
     detalle: false,
 };
 
@@ -46,9 +44,6 @@ const validarFormulario = (e) => {
             break;
         case "telefono":
             validarCampo(expresiones.telefono, e.target, "Telefono");
-            break;
-        case "contraseña":
-            validarCampo(expresiones.contraseña, e.target, "Contraseña");
             break;
         case "detalle":
             validarCampo(expresiones.detalle, e.target, "detalle");
@@ -91,21 +86,22 @@ $formulario.addEventListener('submit', (e) => {
     const $formularioCamposRequeridos = document.getElementById('formularioCamposRequeridos');
     const $formularioMensajeExito = document.getElementById('formularioMensaje-exito');
 
-    if (campos.nombre && campos.apellido1 && campos.apellido2 && campos.correo &&
-        campos.identificacion && campos.telefono && campos.contraseña && campos.detalle) {
-        
+    if (campos.nombre && campos.apellido1 && campos.apellido2 &&
+        campos.identificacion && campos.telefono && campos.detalle) {
+                
         $formularioMensajeExito.classList.add('formularioMensaje-exito-activo');
         $formularioCamposRequeridos.classList.remove('formularioCamposRequeridos-activo');
-
-        $formulario.reset();
 
         document.querySelectorAll('.formularioGrupo-correcto').forEach((icono) => {
             icono.classList.remove('formularioGrupo-correcto');
         });
 
+        $formulario.reset();
+
         setTimeout(() => {
             $formularioMensajeExito.classList.remove('formularioMensaje-exito-activo');
-        }, 5000);
+            location.reload();
+        }, 2000);
 
     } else {
         $formularioCamposRequeridos.classList.add('formularioCamposRequeridos-activo');

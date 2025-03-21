@@ -87,16 +87,8 @@
 
             <div class="containerCorreo">
 
-                <!-- Grupo Correo Electrónico -->
-                <div class="formularioGrupo" id="grupoCorreo">
-                    <input type="email" class="formularioInput" name="correo" id="correo"
-                        placeholder="Correo electrónico">
-                    <i class='bx formularioValidacion-estado'></i>
-                    <p class="formularioInput-error">Ingrese un correo válido.</p>
-                </div>
-
                 <!-- Grupo Identificación -->
-                <div class="formularioGrupo" id="grupoIdentificacion">
+                <div class="formularioGrupo identificacionInput" id="grupoIdentificacion">
                     <input type="text" class="formularioInput" name="identificacion" id="identificacion"
                         placeholder="Identificación">
                     <i class='bx formularioValidacion-estado'></i>
@@ -104,7 +96,7 @@
                 </div>
 
                 <!-- Grupo Teléfono -->
-                <div class="formularioGrupo" id="grupoTelefono">
+                <div class="formularioGrupo telefonoInput" id="grupoTelefono">
                     <input type="text" class="formularioInput" name="telefono" id="telefono" placeholder="Teléfono">
                     <i class='bx formularioValidacion-estado'></i>
                     <p class="formularioInput-error">Ingrese un número de teléfono válido.</p>
@@ -114,19 +106,20 @@
 
             <div class="containerContraseña">
 
-                <!-- Grupo Contraseña -->
-                <div class="formularioGrupo contraseña" id="grupoContraseña">
-                    <input type="password" class="formularioInput" name="contraseña" id="contraseña"
-                        placeholder="Contraseña">
+                <!-- Grupo Correo Electrónico -->
+                <div class="formularioGrupo correoPerfil" id="grupoCorreo">
+                    <input type="email" value="laly@gmail.com" class="formularioInput" name="correo" id="correo"
+                        placeholder="Correo electrónico" disabled>
                     <i class='bx formularioValidacion-estado'></i>
-                    <p class="formularioInput-error">Ingrese una contraseña válida (4-12 caracteres).</p>
+                    <p class="formularioInput-error">Ingrese un correo válido.</p>
                 </div>
 
+
                 <!-- Grupo Menú desplegable -->
-                <div class="formularioGrupo menuDesplegable" id="grupoMenu">
+                <div class="formularioGrupo menuDesplegable distrito" id="grupoMenu">
                     <div class="formularioGrupo-input">
                         <select name="menuDesplegable" id="menuDesplegable">
-                            <option value="#" selected disabled>Distrito</option>
+                            <option value="#" selected disabled>Seleccione un distrito</option>
                             <option value="San Pedro">San Pedro</option>
                             <option value="Sabanilla">Sabanilla</option>
                             <option value="Mercedes">Mercedes</option>

@@ -191,7 +191,6 @@ input:hover, select:hover, textarea:hover {
 
 .containerCorreo{
     display: flex;
-    justify-content: space-between;
     width: 100%;
     padding: 10px 0;
     gap: 10px;
@@ -205,7 +204,7 @@ input:hover, select:hover, textarea:hover {
     padding: 10px 0;
 }
 
-.contraseña{
+.correoPerfil{
     width: 50%;
 }
 
@@ -420,6 +419,10 @@ footer {
     padding: 20px;
 }
 
+.identificacionInput, .telefonoInput {
+    width: 50%;
+}
+
 
 
 /* --------------------- MEDIA QUARIES --------------------- */
@@ -489,7 +492,11 @@ footer {
     }
     .tituloContacto {
         font-size: 1.5rem;
-    }    
+    }   
+    .identificacionInput, .telefonoInput {
+        width: 100%;
+    }
+     
 }
 
 
@@ -521,6 +528,12 @@ footer {
     .nombre, .primerApellido, .segundoApellido, .correo, .Identificacion, .telefono {
         margin-bottom: 10px;
     }
+    .correoPerfil, .distrito{
+        width: 100%;
+    }
+    .containerContraseña {
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width: 450px){
@@ -550,4 +563,7 @@ footer {
     }
 }
 
+input:disabled {
+    background-color: #ebeaea;
+}
 

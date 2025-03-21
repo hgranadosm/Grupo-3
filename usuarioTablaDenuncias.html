@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Iniciativa</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Mis denuncias</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="./formularioIniciativas.css">
+    <link rel="stylesheet" type="text/css" href="./consejoTablaDenuncias.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -15,7 +14,7 @@
 </head>
 
 <body>
-
+        <!--MENU-->
     <header>
         <div class="contenedorHeader">
             <div class="logoContentedor">
@@ -30,7 +29,7 @@
                 <a class="menuEnlace" href="./paginaServicios.html">Servicios</a>
                 <a class="menuEnlace" href="./usuarioIniciativas.html">Iniciativas</a>
                 <a class="menuEnlace" href="#">Noticias</a>
-                <a class="menuEnlace" href="#">Avisos</a>
+                <a class="menuEnlace" href="./formularioAvisosAdministrador.html">Avisos</a>
                 <a class="menuEnlace" href="#">Denuncias</a>
                 <a class="menuIconoEnlace" href="./editarPerfil.html">
                     <i class="iconoMenu fa-solid fa-user"></i>                
@@ -40,55 +39,69 @@
         </div>
     </header>
 
-    <div class="containerPadre">
-        <div class="containerTituloImagen">
-            <h3 class="tituloRegistro">Formulario Iniciativa</h3>
-            <div class="icono">
-                <i class="fa-solid fa-image"></i>
-            </div>
+    <!--TABLA-->
+
+    <div class="containerTituloBoton">
+        <h3 class="tituloTabla">Mis denuncias</h3>
+        <div class="contenedorBoton">
+            <a href="./Denuncias.html" class="denunciaBoton">Crea tu denuncia</a>
         </div>
-
-        <form action="" class="formulario" id="formulario">
-            <div class="contenedorFormulario">
-
-                <!-- Grupo -->
-                <div class="formularioGrupo containerTitulo" id="grupotitulo">
-                    <input type="text" class="formularioInput" name="titulo" id="titulo" placeholder="Nombre de la iniciativa">
-                    <i class='bx formularioValidacion-estado'></i>
-                    <p class="formularioInput-error">Debe agregar un título para la iniciativa</p>
-                </div>
-
-                <div class="formularioGrupo containernombre" id="gruponombre">
-                    <input type="text" class="formularioInput" name="nombre" id="nombre" placeholder="Propuesto por:">
-                    <i class='bx formularioValidacion-estado'></i>
-                    <p class="formularioInput-error">Debe agregar por quién es propuesto</p>
-                </div>
-
-                <div class="formularioGrupo containerDescripcion" id="grupodescripcion">
-                    <textarea rows="10" class="formularioInput" name="descripcion" id="descripcion" placeholder="Descripción"></textarea>
-                    <i class='bx formularioValidacion-estado'></i>
-                    <p class="formularioInput-error">Debe agregar una descripción. Máximo de 300 caracteres y sin carateres especiales como @, #, $, %, &, *</p>
-                </div>
-            </div>
-
-            <div class="containerBoton">
-
-                <div class="containerBoton">
-                    <button type="submit" class="botonRegistro">Crear Iniciativa</button>
-                </div>
-
-                <div class="formularioCamposRequeridos" id="formularioCamposRequeridos">
-                    <p><b>Por favor completa todos los campos</b></p>
-                </div>
-
-                <div class="formularioMensaje-exito" id="formularioMensaje-exito">
-                    <p><b>¡Tu iniciativa se ha creado con éxito!</b></p>
-                </div>
-            </div>
-        </form>
+    </div>
+    
+    <div class="contenedorTablaResponsive">
+        <table class="contenedorTabla">
+            <tr class="filas">
+                <th class="titulosId">#</th>
+                <th class="titulos">Nombre de la denuncia</th>
+                <th class="titulos">Descripción</th>
+                <th class="titulos">Estatus</th>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">1</td>
+                <td class="descripcion">Huecos en la calle principal de Sabanilla</td>
+                <td class="descripcion">Hay varios baches profundos en la calle frente al supermercado La Canasta, dificultando el tránsito y dañando vehículos.</td>
+                <td class="status">
+                    <p>En proceso</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">2</td>
+                <td class="descripcion">Alumbrado público apagado en el Parque de San Pedro</td>
+                <td class="descripcion">Las lámparas del parque están apagadas desde hace una semana, lo que genera inseguridad en horas de la noche.</td>
+                <td class="status">
+                    <p class="aprobado">Aprobado</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">3</td>
+                <td class="descripcion">Basura acumulada en la acera de Barrio Dent</td>
+                <td class="descripcion">Se observa un cúmulo de bolsas de basura sin recoger durante más de tres días, atrayendo animales y malos olores.</td>
+                <td class="status">
+                    <p>En proceso</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">4</td>
+                <td class="descripcion">Ruido excesivo en bar Los Amigos</td>
+                <td class="descripcion">El bar mantiene música en alto volumen hasta después de la medianoche, afectando el descanso de los vecinos.</td>
+                <td class="status">
+                    <p>En proceso</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td class="final" colspan="5">Fin de las denuncias</td>
+            </tr>
+        </table>
     </div>
 
 
+
+    <!--FOOTER-->
     <footer>
         <div class="contenedorFooter">
             <div class="primeraColumnaFooter">
@@ -98,7 +111,7 @@
                 <a href="./paginaServicios.html">Servicios</a>
                 <a href="./usuarioIniciativas.html">Iniciativas</a>
                 <a href="">Noticias</a>
-                <a href="">Avisos</a>
+                <a href="./formularioAvisosAdministrador.html">Avisos</a>
                 <a href="">Denuncias</a>
             </div>
             <div class="footerColumna redesColumna">
@@ -112,8 +125,6 @@
             <p>Todos los derechos reservados Municipalidad de Montes de Oca</p>
         </div>
     </footer>
-
-    <script src="./javascript/formularioIniciativas.js"></script>
 </body>
 
 </html>

@@ -113,7 +113,7 @@ input:hover, select:hover, textarea:hover {
     padding: 10px 0;
 }
 
-.contraseña{
+.contrasena{
     width: 50%;
 }
 
@@ -249,6 +249,12 @@ input:hover, select:hover, textarea:hover {
     }
     .nombre, .primerApellido, .segundoApellido, .correo, .Identificacion, .telefono {
         margin-bottom: 10px;
+    }
+    .distrito, .contrasena {
+        width: 100%;
+    }
+    .containerContraseña{
+        flex-wrap: wrap;
     }
 }
 

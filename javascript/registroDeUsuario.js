@@ -92,19 +92,21 @@ $formulario.addEventListener('submit', (e) => {
     const $formularioMensajeExito = document.getElementById('formularioMensaje-exito');
 
     if (campos.nombre && campos.apellido1 && campos.apellido2 && campos.correo && campos.identificacion && campos.telefono && campos.contraseña && campos.detalle) {
+
         
         $formularioMensajeExito.classList.add('formularioMensaje-exito-activo');
         $formularioCamposRequeridos.classList.remove('formularioCamposRequeridos-activo');
-
-        $formulario.reset();
 
         document.querySelectorAll('.formularioGrupo-correcto').forEach((icono) => {
             icono.classList.remove('formularioGrupo-correcto');
         });
 
+        $formulario.reset();
+
         setTimeout(() => {
             $formularioMensajeExito.classList.remove('formularioMensaje-exito-activo');
-        }, 5000);
+            location.reload();
+        }, 2000);
 
     } else {
         $formularioCamposRequeridos.classList.add('formularioCamposRequeridos-activo');

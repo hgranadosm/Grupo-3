@@ -98,15 +98,16 @@ $formulario.addEventListener('submit', (e) => {
         $formularioMensajeExito.classList.add('formularioMensaje-exito-activo');
         $formularioCamposRequeridos.classList.remove('formularioCamposRequeridos-activo');
 
-        $formulario.reset();
-
         document.querySelectorAll('.formularioGrupo-correcto').forEach((icono) => {
             icono.classList.remove('formularioGrupo-correcto');
         });
 
+        $formulario.reset();
+
         setTimeout(() => {
             $formularioMensajeExito.classList.remove('formularioMensaje-exito-activo');
-        }, 5000);
+            location.reload();
+        }, 2000);
 
     } else {
         $formularioCamposRequeridos.classList.add('formularioCamposRequeridos-activo');
