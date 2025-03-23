@@ -1,5 +1,4 @@
 
-//
 const noticias = [
     { 
         titulo: "Nuevo correo del Concejo Municipal", 
@@ -16,7 +15,8 @@ const noticias = [
         resumen: " Reciclaje en Parques",
         imagen: "img/comunidad.jpg",
         enlace: "file:///C:/Users/Prue/OneDrive/Desktop/Proyecto%20tecnico/Repo/RepoPersonal/reciclaje.html"
-    },   { 
+    },  
+    { 
         titulo: "Comité cantonal para lo persona joven ", 
         fecha: "5 febrero 2025", 
         mes: "FEBRERO", 
@@ -31,7 +31,16 @@ const noticias = [
         resumen: " Feria de la salud 2025",
         imagen: "img/salud.jpg",
         enlace: "file:///C:/Users/Prue/OneDrive/Desktop/Proyecto%20tecnico/Repo/RepoPersonal/feriaSalud.html"
-    },
+     }
+     ,
+    { 
+        titulo: "Control Vial ", 
+        fecha: "2 enero 2025", 
+        mes: "ENERO", 
+        resumen: " Refuerzo en el Control Vial de Montes de Oca",
+        imagen: "img/controlVial.jpg",
+        enlace: "file:///C:/Users/Prue/OneDrive/Desktop/Proyecto%20tecnico/Repo/RepoPersonal/controlVial.html"
+     }
 
 ];
 
@@ -89,3 +98,4 @@ function mostrarNoticias() {
 }
 
 mostrarNoticias();
+
