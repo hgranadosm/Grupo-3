@@ -1,5 +1,4 @@
 
-//
 const noticias = [
     { 
         titulo: "Nuevo correo del Concejo Municipal", 
@@ -7,7 +6,7 @@ const noticias = [
         mes: "MARZO", 
         resumen: "Nuevo correo del Concejo Municipal",
         imagen: "img/correo_concejo.png",
-        enlace: "file:///C:/Users/Prue/OneDrive/Desktop/Proyecto%20tecnico/Repo/RepoPersonal/cambioCorreo.html"
+        enlace: "./cambioCorreo.html"
     },
     { 
         titulo: "Resiclaje en parques", 
@@ -15,14 +14,15 @@ const noticias = [
         mes: "MARZO", 
         resumen: " Reciclaje en Parques",
         imagen: "img/comunidad.jpg",
-        enlace: "file:///C:/Users/Prue/OneDrive/Desktop/Proyecto%20tecnico/Repo/RepoPersonal/reciclaje.html"
-    },   { 
+        enlace: "./reciclaje.html"
+    },  
+    { 
         titulo: "Comité cantonal para lo persona joven ", 
         fecha: "5 febrero 2025", 
         mes: "FEBRERO", 
         resumen: " Comité cantonal para la persona joven",
         imagen: "img/comite_joven.jpg",
-        enlace: "file:///C:/Users/Prue/OneDrive/Desktop/Proyecto%20tecnico/Repo/RepoPersonal/comiteCantonal.html"
+        enlace: "./comiteCantonal.html"
     },
     { 
         titulo: "Feria dew la salud ", 
@@ -30,8 +30,17 @@ const noticias = [
         mes: "ENERO", 
         resumen: " Feria de la salud 2025",
         imagen: "img/salud.jpg",
-        enlace: "file:///C:/Users/Prue/OneDrive/Desktop/Proyecto%20tecnico/Repo/RepoPersonal/feriaSalud.html"
-    },
+        enlace: "./feriaSalud.html"
+     }
+     ,
+    { 
+        titulo: "Control Vial ", 
+        fecha: "2 enero 2025", 
+        mes: "ENERO", 
+        resumen: " Refuerzo en el Control Vial de Montes de Oca",
+        imagen: "img/controlVial.jpg",
+        enlace: "./controlVial.html"
+     }
 
 ];
 
@@ -89,3 +98,4 @@ function mostrarNoticias() {
 }
 
 mostrarNoticias();
+

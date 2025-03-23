@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -11,13 +12,16 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 .containerPrincipal{
-    max-width: 520px; 
-    background-color: #ffffff;
+    max-width: 520px;
     margin: auto;
-    margin-top: 150px ;
-    border-radius: 35px;
+    margin-top: 210px ;
     padding-bottom: 15px;
+    margin-bottom: 80px;
+    border: 1px solid rgb(224, 224, 224) ;
+    border-radius: 18px;
 
+    
+    
 
 }
 .containerTitulo{
@@ -78,4 +82,31 @@ a{
     margin-left: 150px;
     width: 100px;
     height: 35px;
+}
+ @media (max-width:600px) {
+    .containerFinal{
+        display: flex;
+        justify-content: space-between;
+    }
+    .containerPrincipal{
+        max-width: 95%;
+
+    }
+    .botonContinuar{
+        margin-right: 8%;
+        width: 200px;
+    }  
+ }
+ @media  (max-width: 405px){
+    .containerFinal{
+        display: flex;
+        
+    }
+
+    .botonContinuar{
+        margin-right: 5%;
+        width: 150px;
+        margin-left: 0;
+    }
+    
 }

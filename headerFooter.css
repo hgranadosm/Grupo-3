@@ -18,7 +18,7 @@ html, body {
 
 
 body{
-    background-color: #ffffff;
+    background-color: #f1f5f9;
     color: #282d4d;
     margin: auto;
     font-family: 'Montserrat', sans-serif;
@@ -26,6 +26,7 @@ body{
 
 
 /* --------------------- MENU --------------------- */
+
 
 header{
     position: fixed;
@@ -53,6 +54,7 @@ header{
 .logoContentedor {
     display: flex;
     align-items: center;
+    flex: 1;
 }
 
 .boton{
@@ -64,6 +66,7 @@ header{
     border-radius: 10px;
     transition: .5s;
     font-size: 0.8rem;
+    text-decoration: none;
 }
 
 .boton:hover{
@@ -80,7 +83,7 @@ header{
     height: 35px;
 }
 
-nav a{
+nav .menuEnlace{
     position: relative;
     font-size: 0.8rem;
     font-weight: 500;
@@ -90,11 +93,33 @@ nav a{
     transition: .3s;
 }
 
-nav a:hover{
+nav .menuEnlace:hover{
     color: #ffffff;
     background-color: #ecf007;
     border-radius: 100px;
 }
+
+
+.menuIconoEnlace{
+    text-decoration: none;
+    padding: 3px 10px;
+}
+
+.iconoMenu {
+    color: #f57a47;
+    transition: .3s;
+}
+
+.iconoMenu:hover {
+    color:  #ecf007;
+    background-color: none;
+}
+
+
+
+
+
+
 /* inicio menu responsive */
 #check{
     display: none;
@@ -106,6 +131,9 @@ nav a:hover{
     order: 1;
     display: none;
 }
+
+
+
 
 @media screen and (max-width: 1030px) {
     .checkbtn{
@@ -184,20 +212,18 @@ nav a:hover{
 /* final menu responsive */
 
 footer {
-
-    padding: 47px 0% 0px 0%;
+    padding: 47px 1% 0px 1%;
 }
 
 .contenedorFooter {
-    padding: 30px 0px 10px 5%;
+    padding: 30px 5% 10px 10%;
     display: flex;
     flex-wrap: wrap;
-    min-height: auto;
+    min-height: 400px;
     width: 100%;
     background: #282d4d;
+    border-radius: 10px;
     align-items: center;
-    box-sizing: border-box; 
-    overflow: hidden;  
 }
 
 .footerLogo {
@@ -270,6 +296,5 @@ footer {
     font-size: 13px;
     padding: 20px;
 }
-
 
 
