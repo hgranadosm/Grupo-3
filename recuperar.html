@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="inicioSesio.css">
+    <link rel="stylesheet" href="headerFooter.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
     <title>Recuperar contraseña</title>
 </head>
 <body>
 
+    <header>
+        <div class="contenedorHeader">
+            <a href="./index.html" class="logoContentedor">
+                <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <nav class="menuHeader opciones">
+                <a class="menuEnlace" href="./paginaServicios.html">Servicios</a>
+                <a class="menuEnlace" href="./usuarioIniciativas.html">Iniciativas</a>
+                <a class="menuEnlace" href="#">Noticias</a>
+                <a class="menuEnlace" href="#">Avisos</a>
+                <a class="menuEnlace" href="#">Denuncias</a>
+                <a class="menuIconoEnlace" href="./editarPerfil.html">
+                    <i class="iconoMenu fa-solid fa-user"></i>                
+                </a>
+                <a class="boton" href="./inicioSesion.html">Cerrar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+
+
     <div class="containerPrincipal">
-        <div class="titulo">
+        <div class="containerTitulo">
             <h2 class="">Recuperar Usuario </h2>
         </div> 
         <div class="containerForm">
@@ -21,11 +51,37 @@
         </div>
         <div class="containerFinal">
             <a href="#" id="iniciarSesion">Iniciar sesión</a>
-            <button type="button" class="continuar">Recuperar</button>
+            <button type="button" class="botonContinuar">Recuperar</button>
         </div>
 
         
     </div>
+
+
+    <div class="contenedorFooter">
+        <div class="primeraColumnaFooter">
+            <img class="footerLogo" src="./img/LogoMuniBlanco.png" width="158px" alt="logo municipales">
+            <a href="./inicioSesion.html" class="footerBoton">Iniciar sesión</a>
+            <a href="./registroDeUsuario.html" class="footerBoton">Registro</a>
+        </div>
+        <div class="footerColumna">
+            <a href="./paginaServicios.html">Servicios</a>
+            <a href="./usuarioIniciativas.html">Iniciativas</a>
+            <a href="">Noticias</a>
+            <a href="">Avisos</a>
+            <a href="">Denuncias</a>
+        </div>
+        <div class="footerColumna redesColumna">
+            <a href="https://www.instagram.com/gobmontesdeoca/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/gobmontesdeoca/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/GobMontesDeOca"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCux4pfOGXArPst7ZyDjxpog"><i class="fa-brands fa-square-youtube fa-bounce"></i></a>
+        </div>
+    </div>
+    <div class="copyRight">
+        <p>Todos los derechos reservados Municipalidad de Montes de Oca</p>
+    </div>
+</footer>
     
 </body>
 </html>
