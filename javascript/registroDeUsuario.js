@@ -7,7 +7,7 @@ const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/,
     apellido1: /^[a-zA-ZÀ-ÿ\s]{3,40}$/,
     apellido2: /^[a-zA-ZÀ-ÿ\s]{3,40}$/,
-    correo: /^[a-zA-Z0-9\_]+@[a-zA-Z]+\.[a-zA-Z]+$/,
+    correo:/^[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]+$/,
     identificacion: /^\d{9,11}$/,
     telefono: /^\d{8,11}$/,
     contraseña: /^.{4,12}$/,

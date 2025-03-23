@@ -140,6 +140,14 @@ nav .menuEnlace:hover{
     min-width: 100px;
 }
 
+.usuarioPropuesta{
+    min-width: 170px !important;
+}
+
+.nombreIniciativa{
+    width: 260px !important;
+}
+
 .descripcion{
     padding: 10px;
     font-size: 0.8rem;
@@ -194,6 +202,7 @@ nav .menuEnlace:hover{
     flex-wrap: wrap;
     gap: 10px;
     text-align: center;
+    justify-content: center;
 }
 
 .contenedorTablaResponsive{
