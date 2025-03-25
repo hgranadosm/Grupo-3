@@ -121,7 +121,7 @@ nav .menuEnlace:hover{
     gap: 30px;
     padding-left: 20px;
     padding-right: 20px;
-
+    align-items: start;
 }
 
 .container1{
@@ -129,6 +129,11 @@ nav .menuEnlace:hover{
     background-color: #f1f5f9;
     padding: 40px;
     border-radius: 20px;
+    align-self: center;
+}
+
+.parrafo{
+    text-align: justify;
 }
 
 .imagen{

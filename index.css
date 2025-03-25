@@ -234,6 +234,7 @@ nav a:hover{
 }
 
 .flecha{
+   
     font-size: 15px;
     transition: transform 0.3s ease; 
 }
@@ -241,7 +242,7 @@ nav a:hover{
 .flecha:hover{
     font-size: 15px;
     transform: scale(1.5); 
-    padding-left: 5px;
+    padding-left: 3px;
 }
 
 .cardsNoticias{
@@ -299,25 +300,26 @@ nav a:hover{
 
 .botonCard{
     position: absolute;
-    bottom: 1.5rem;
+    bottom: 1.3rem;
     right: 1.5rem;
     color: #ffffff;
     background-color: #f57a47;
-    padding: 13px 32px;
+    padding: 6px 13px;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 8px;
+    font-size: 15px;
 }
 
 .flechaCard{
     padding-left: 8px;
-    font-size: 15px;
+    font-size: 12px;
     transition: transform 0.3s ease; 
 }
 
 .flechaCard:hover{
-    font-size: 15px;
-    transform: scale(1.5); 
+    font-size: 12px;
+    transform: scale(1.4); 
     padding-left: 8px;
 }
 
