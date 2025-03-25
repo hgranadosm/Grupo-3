@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Usuarios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="administradorRegistroUsuarios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+        <!--MENU-->
+    <header>
+        <div class="contenedorHeader">
+            <a href="./index.html" class="logoContentedor">
+                <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <nav class="menuHeader opciones">
+                <a class="menuEnlace" href="./paginaServicios.html">Servicios</a>
+                <a class="menuEnlace" href="./administradorIniciativas.html">Iniciativas</a>
+                <a class="menuEnlace" href="./paginaNoticia2.html">Noticias</a>
+                <a class="menuEnlace" href="./formularioAvisosAdministrador.html">Avisos</a>
+                <a class="menuEnlace" href="./Denuncias.html">Denuncias</a>
+                <a class="menuIconoEnlace" href="./editarPerfil.html">
+                    <i class="iconoMenu fa-solid fa-user"></i>                
+                </a>
+                <a class="boton" href="./inicioSesion.html">Cerrar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <!--TABLA-->
+    <h1 class="tituloTabla">Administración de Usuarios</h1>
+    <div class="contenedorTablaResponsive">
+        <table class="contenedorTabla">
+            <tr class="filas">
+                <th class="titulosId">#</th>
+                <th class="titulos nombreUsuario">Nombre de Usuario</th>
+                <th class="titulos usuarioDenuncia">Denuncias realizadas</th>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">1</td>
+                <td class="descripcion">Gonzalo Villalobos Gomez</td>
+                <td class="descripcion-D">Carreteras en mal estado en Los Rosales, Sabanilla.</td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">2</td>
+                <td class="descripcion">Eduardo Hidalgo Jimenez</td>
+                <td class="descripcion-D">Agua sucia en barrios de San Rafael</td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">3</td>
+                <td class="descripcion">Juan Carlos Esquivel Flores</td>
+                <td class="descripcion-D">Alumbrado público dañado. Postes de luz apagados o en mal estado.</td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">4</td>
+                <td class="descripcion">Madelyn Quirós Edwards</td>
+                <td class="descripcion-D">Fugas de agua o alcantarillado. Roturas en tuberías o aguas servidas en la vía pública.</td>
+             
+            </tr>
+    
+            <tr>
+                <td class="descripcion">5</td>
+                <td class="descripcion">Manuel Soto Tenorio</td> 
+                <td class="descripcion-D">Semáforos o señalización dañada. Semáforos que no funcionan o señales de tránsito rotas. </td>
+             
+            </tr>
+    
+            <tr>
+                <td class="descripcion">6</td>
+                <td class="descripcion">Fernanda Vargas Mata</td>
+                <td class="descripcion-D">Quema de basura o desechos. Personas o empresas queman residuos contaminando el aire.</td>
+             
+            </tr>
+    
+            <tr>
+                <td class="descripcion">7</td>
+                <td class="descripcion">María Paula Juárez Castillo </td>
+                <td class="descripcion-D">Invasión de áreas verdes. Construcciones en parques o zonas de recreación.</td>
+
+            </tr>
+    
+            <tr>
+                <td class="descripcion">8</td>
+                <td class="descripcion"> Daniel Naranjo Mena </td>
+                <td class="descripcion-D">Falta de señales de tránsito en zonas escolares.</td>
+            </tr>
+    
+            <tr>
+                <td class="descripcion">9</td>
+                <td class="descripcion">Victor Leandro Soto</td>
+                <td class="descripcion-D">Contaminación de ríos o suelos. Empresas o personas tiran desechos en áreas naturales.</td>
+      
+            </tr>
+    
+            <tr>
+                <td class="descripcion">10</td>
+                <td class="descripcion">Laura Huerta Campos</td>
+                <td class="descripcion-D">Riesgo estructural en edificios. Inmuebles en peligro de derrumbe o sin mantenimiento. </td>
+            
+            </tr>
+    
+            <tr>
+                <td class="descripcion">11</td>
+                <td class="descripcion">Gerald Villegas Ramirez</td>
+                <td class="descripcion-D"> Clases de computación para la tercera edad.</td>
+       
+            </tr>
+    
+            <tr>
+                <td class="descripcion">12</td>
+                <td class="descripcion">Jimena Loria Chacón </td>
+                <td class="descripcion-D">Falta de mantenimiento en parques y plazas. Bancas rotas, juegos infantiles dañados o áreas verdes descuidadas.</td>
+        
+            </tr>
+    
+            <tr>
+                <td class="descripcion">13</td>
+                <td class="descripcion">Berardo Román Figuerosa </td>
+                <td class="descripcion-D">Instalación de cámaras para mejorar la seguridad. </td>
+             
+            </tr>
+    
+            <tr>
+                <td class="descripcion">14</td>
+                <td class="descripcion">Ibrahim Madrigal Rodríguez</td>
+                <td class="descripcion-D">Casas o terrenos abandonados usados para actividades delictivas. Lugares ocupados por delincuentes o indigentes sin control.</td>
+    
+            </tr>
+    
+            <tr>
+                <td class="descripcion">15</td>
+                <td class="descripcion">Melissa Galán Sánchez</td>
+                <td class="descripcion-D">Rampas y señalización en aceras y edificios públicos.</td>
+                
+            </tr>
+    
+            <tr>
+                <td class="descripcion">16</td>
+                <td class="descripcion">Irina Salazar Marín </td>
+                <td class="descripcion-D">Falta de señalización vial. Semáforos dañados, falta de cruces peatonales o señales de tránsito inexistentes.</td>
+ 
+            </tr>
+    
+            <tr>
+                <td class="descripcion">17</td>
+                <td class="descripcion">Mauricio Gamboa Zeledón</td>
+                <td class="descripcion-D">Estacionamiento indebido en la localidad. Vehículos ocupando veredas, rampas para discapacitados o accesos a viviendas.</td>
+            
+            </tr>
+    
+            <tr>
+                <td class="descripcion">18</td>
+                <td class="descripcion"> Elena Solís Delgado </td>
+                <td class="descripcion-D"> 	Ruido excesivo en la localidad. Fiestas, bares o maquinaria que generan ruido fuera de horarios permitidos. </td>
+               
+            </tr>
+    
+            <tr>
+                <td class="descripcion">19</td>
+                <td class="descripcion">Alexander Smith Robinson </td>
+                <td class="descripcion-D"> Falta de patrullaje municipal.Zonas de la localidad sin vigilancia o presencia policial. </td>
+               
+            </tr>
+            <tr>
+                <td class="descripcion">20</td>
+                <td class="descripcion">Julissa Martínez Arce </td>
+                <td class="descripcion-D">Mal estado del transporte público. Buses, taxis o mototaxis en malas condiciones o sin regulaciones. </td>
+               
+            </tr>
+        </table>
+       
+        <div class="content" id="pageContent">
+            Página 1
+        </div>
+    
+        <div class="paginas">
+            <button id="prevPage">Anterior</button>
+            <button id="nextPage">Siguiente</button>
+        </div>
+    </div>
+
+
+
+    <!--FOOTER-->
+    <footer>
+        <div class="contenedorFooter">
+            <div class="primeraColumnaFooter">
+                <img class="footerLogo" src="./img/LogoMuniBlanco.png" width="158px" alt="logo municipales">
+            </div>
+            <div class="footerColumna">
+                <a href="./paginaServicios.html">Servicios</a>
+                <a href="./administradorIniciativas.html">Iniciativas</a>
+                <a href="./paginaNoticia2.html">Noticias</a>
+                <a href="./formularioAvisosAdministrador.html">Avisos</a>
+                <a href="./Denuncias.html">Denuncias</a>
+            </div>
+            <div class="footerColumna redesColumna">
+                <a href="https://www.instagram.com/gobmontesdeoca/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/gobmontesdeoca/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/GobMontesDeOca"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCux4pfOGXArPst7ZyDjxpog"><i class="fa-brands fa-square-youtube fa-bounce"></i></a>
+            </div>
+        </div>
+        <div class="copyRight">
+            <p>Todos los derechos reservados Municipalidad de Montes de Oca</p>
+        </div>
+    </footer>
+</body>
+
+</html>

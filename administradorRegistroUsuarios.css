@@ -212,7 +212,28 @@ nav .menuEnlace:hover{
 .contenedorTablaResponsive{
     overflow-x: auto;
 }
-
+.content{
+   display: flex;
+   justify-content: end;
+   margin-right: 270px;
+}
+.paginas{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    padding: 10px;
+    margin-right: 200px;
+}
+.paginas button{
+    background-color: #f57a47;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: .3s;
+}
 /* --------------------- FOOTER --------------------- */
 
 footer {
@@ -371,6 +392,14 @@ footer {
     .tituloContacto {
         font-size: 1.5rem;
     }    
+        .content {
+            margin-top: 10px;
+          margin-right: 67px; /* Ajusta este valor según sea necesario */
+        }
+        .paginas {
+          margin-right: 0; /* Ajusta este valor según sea necesario */
+        }     
+
 }
 
 
