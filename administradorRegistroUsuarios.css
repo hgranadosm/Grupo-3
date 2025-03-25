@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    background-color: #ffffff;
+    color: #282d4d;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --------------------- MENU --------------------- */
+
+header{
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    top: 0px;
+    padding: 38px 5% 0px 5%;
+    background: inherit;
+}
+
+.contenedorHeader {
+    border: 1px solid #dadada;
+    padding: 14px 40px; 
+    border-radius: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    width: 100%;
+}
+
+
+.logoContentedor {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.boton{
+    border: 1px solid #dadada;
+    color: #f57a47;
+    padding: 6px 22px;
+    cursor: pointer;
+    margin-left: 23px;
+    border-radius: 10px;
+    transition: .5s;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.boton:hover{
+    color: #ffffff;
+    background-color: #f57a47;
+    border-radius: 10px;
+}
+
+.isotipo {
+    height: 70px;
+}
+
+.logo{
+    height: 35px;
+}
+
+nav .menuEnlace{
+    position: relative;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #282d4d;
+    padding: 3px 22px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav .menuEnlace:hover{
+    color: #ffffff;
+    background-color: #ecf007;
+    border-radius: 100px;
+}
+
+
+.menuIconoEnlace{
+    text-decoration: none;
+    padding: 3px 10px;
+}
+
+.iconoMenu {
+    color: #f57a47;
+    transition: .3s;
+}
+
+.iconoMenu:hover {
+    color:  #ecf007;
+    background-color: none;
+}
+
+
+/* --------------------- TABLA --------------------- */
+
+.tituloTabla{
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    line-height: 1;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.contenedorTabla{
+    width: 60%;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid #493c2b24;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+}
+
+.titulosId{
+    background-color: #f1f5f9;
+    color: #ababab;
+    padding: 10px;
+    text-align: center;
+    min-width: 10px;
+}
+.titulos {
+    background-color: #f1f5f9;
+    color: #ababab;
+    padding: 10px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.usuarioDenuncia{
+    min-width: 170px !important;
+}
+
+.nombreUsuario{
+    width: 260px !important;
+}
+
+.descripcion{
+    padding: 10px;
+    font-size: 0.8rem;
+}
+.descripcion-D{
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.boton1, .boton2{
+    display: inline-block;
+    background-color: rgb(0, 155, 0);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: .3s;
+}
+
+.boton1:hover{
+    color: #ffffff;
+    background-color: rgb(4, 182, 4);
+    border-radius: 10px;
+}
+
+.boton2{
+    background-color: rgb(172, 3, 3);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: .3s;
+}
+
+.boton2:hover{
+    color: #ffffff;
+    background-color: rgb(203, 5, 5);
+    border-radius: 10px;
+}
+
+.final{
+
+    font-weight: bold;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+.contenedorBotones{
+    width: 208px;
+    padding: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.contenedorTablaResponsive{
+    overflow-x: auto;
+}
+
+/* --------------------- FOOTER --------------------- */
+
+footer {
+    padding: 47px 1% 0px 1%;
+}
+
+.contenedorFooter {
+    padding: 30px 5% 10px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 400px;
+    width: 100%;
+    background: #282d4d;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.footerLogo {
+    margin-bottom: 20px;
+}
+
+.primeraColumnaFooter {
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.footerColumna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-grow: 1;
+    border-left: 1px solid #783e28;
+    max-height: 300px;
+    padding: 30px 0px 30px 35px;
+}
+
+.footerColumna a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: left;
+    line-height: 2;
+    transition: 1s all ease;
+}
+
+.footerColumna a:hover {
+    color: #f57a47;
+}
+
+.footerColumna .fa-brands {
+    font-size: 20px;
+}
+
+.footerBoton {
+    border: 1px solid #f57a47;
+    color: #f57a47;
+    padding: 9px 19px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .5s;
+    max-width: 151px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: 1s all ease;
+    text-align: center;
+}
+
+.footerBoton:hover {
+    color: #ffff;
+    background-color: #f57a47;
+    transition: 1s all ease;
+}
+
+.copyRight {
+    text-align: center;
+    width: 100%;
+    color: #282d4d;
+    font-size: 13px;
+    padding: 20px;
+}
+
+
+/* --------------------- MEDIA QUARIES --------------------- */
+
+
+/* ------ Menú ------ */
+
+#check{
+    display: none;
+}
+
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    order: 1;
+    display: none;
+}
+@media screen and (max-width: 1030px) {
+    .checkbtn{
+        display: block;
+    }
+
+    .contenedorHeader {
+        padding: 13px 23px;
+    }
+
+    .opciones{
+        position: fixed;
+        width: 100%;
+        display: flex;
+        height: 100vh;
+        background-color: #f1f5f9;
+        top: 91px;
+        text-align: center;
+        transition: 0.5s;
+        left: -100%;
+        flex-direction: column;
+        padding: 20px 30px;
+    }
+
+    #check:checked ~ .opciones{
+        left: 0;
+    }
+    header {
+        padding-top: 14px;
+    }
+    .contacto {
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 992px) { 
+    .isotipo {
+        height: 44px;
+    }
+    .logo {
+        height: 21px;
+    }
+    nav a {
+        margin-top: 30px;
+    }
+    .boton {
+        margin-left: 0px;
+        width: 189px;
+    }
+    .opciones {
+        align-items: center;
+    }
+    .tituloContacto {
+        font-size: 1.5rem;
+    }    
+}
+
+
+@media screen and (min-width: 993px) and (max-width: 1334px) { 
+    .menuHeader {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+    .boton {
+        padding: 7px 12px;
+        margin-left: 0px;
+        margin: 0px 10px;
+    }
+    nav a {
+        padding: 3px 13px;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* ------ Footer ------ */
+@media screen and (max-width: 522px) {
+    .contenedorFooter {
+        flex-direction: column;
+    }
+    .footerColumna {
+        border-left: none;
+        padding: 30px 0px 30px 0px;
+        align-items: center;
+    }
+    .redesColumna {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+/* ------ Titulo ------ */
+
+@media screen and (max-width: 992px) {
+    html{
+        font-size: 12px;
+    }
+    .tituloTabla{
+        margin-top: 150px;
+    }
+
+    .contenedorTablaResponsive{
+        padding: 0px 2%;
+    }
+}
