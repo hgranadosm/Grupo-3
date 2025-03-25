@@ -13,183 +13,148 @@ body{
     font-family: 'Montserrat', sans-serif;}
 
     header{
-        border: 1px solid #493c2b24;
-        padding: 35px 40px; 
-        margin: 40px; 
-        border-radius: 100px; 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    
-    }
-    nav a{
-        position: relative;
-        font-size: 0.8rem;
-        font-weight: 500;
-        color: #282d4d;
-        padding: 3px 22px;
-        text-decoration: none;
-        transition: .3s;
-    }
-    
-    nav a:hover{
-        color: #ffffff;
-        background-color: #2daae4;
-        border-radius: 100px;
-    }
-    .boton{
-        border: 1px solid #493c2b24;
-        color: #f57a47;
-        padding: 13px 32px;
-        cursor: pointer;
-        margin-left: 23px;
-        border-radius: 10px;
-        transition: .5s;
-        font-size: 0.8rem;
-    }
-    
-    .boton:hover{
-        color: #ffffff;
-        background-color: #f57a47;
-        border-radius: 10px;
-    }
-    
-.containerInicial{
-   text-align: center;
-   display: block;
-   margin: auto;
-   position: relative;
+      position: fixed;
+      z-index: 1;
+      left: 0px;
+      right: 0px;
+      margin: auto;
+      top: 0px;
+      padding: 38px 5% 0px 5%;
+      background: inherit;
+  }
+  
+  .contenedorHeader {
+      border: 1px solid #dadada;
+      padding: 14px 40px; 
+      border-radius: 100px; 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      width: 100%;
+  }
+  
+  
+  .logoContentedor {
+      display: flex;
+      align-items: center;
+      flex: 1;
+  }
+  
+  .boton{
+      border: 1px solid #dadada;
+      color: #f57a47;
+      padding: 6px 22px;
+      cursor: pointer;
+      margin-left: 23px;
+      border-radius: 10px;
+      transition: .5s;
+      font-size: 0.8rem;
+      text-decoration: none;
+  }
+  
+  .boton:hover{
+      color: #ffffff;
+      background-color: #f57a47;
+      border-radius: 10px;
+  }
+  
+  .isotipo {
+      height: 70px;
+  }
+  
+  .logo{
+      height: 35px;
+  }
+  
+  nav .menuEnlace{
+      position: relative;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #282d4d;
+      padding: 3px 22px;
+      text-decoration: none;
+      transition: .3s;
+  }
+  
+  nav .menuEnlace:hover{
+      color: #ffffff;
+      background-color: #ecf007;
+      border-radius: 100px;
+  }
+  
+  
+  .menuIconoEnlace{
+      text-decoration: none;
+      padding: 3px 10px;
+  }
+  
+  .iconoMenu {
+      color: #f57a47;
+      transition: .3s;
+  }
+  
+  .iconoMenu:hover {
+      color:  #ecf007;
+      background-color: none;
+  }
 
+/**Formulario**/
+   .titulos{
+    text-align: center;
+   }
+
+.containerPadre{
+  max-width: 650px;
+  margin: auto;
   background-color: #ffffff;
-  color: #282d4d;
-  margin: auto;
-  font-family: 'Montserrat', sans-serif;
-
+  padding: 40px;
+  margin-top: 50px;
+  border-radius: 20px;
+  margin-top: 150px;
 }
-
-header{
-  position: fixed;
-  z-index: 1;
-  left: 0px;
-  right: 0px;
-  margin: auto;
-  top: 38px;
-  padding: 0px 5%;
-
-}
-
-.contenedorHeader {
-  border: 1px solid #dadada;
-  padding: 14px 40px; 
-  border-radius: 100px; 
+.containerTituloImagen{
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background: #fff;
-  width: 100%;
-}
-
-
-.logoContentedor {
-  display: flex;
+  padding: 10px 0;
   align-items: center;
+  margin-top: 150px;
 }
 
-.boton{
-  border: 1px solid #dadada;
-  color: #f57a47;
-  padding: 6px 22px;
-  cursor: pointer;
-  margin-left: 23px;
-  border-radius: 10px;
-  transition: .5s;
-}
-
-.boton:hover{
-  color: #ffffff;
-  background-color: #f57a47;
-  border-radius: 10px;
-}
-
-.isotipo {
-  height: 70px;
-}
-
-.logo{
-  height: 35px;
-}
-
-nav a{
-  position: relative;
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: #282d4d;
-  padding: 3px 22px;
-  text-decoration: none;
-  transition: .3s;
-}
-
-nav a:hover{
-  color: #ffffff;
-  background-color: #ecf007;
-  border-radius: 100px;
-}
-
-.containerInicial {
-  text-align: center;
-  display: block;
-  margin: auto;
-  position: relative;
-}
-
-.Denuncias h1 {
-  font-size: 4em;
-  margin-top: 160px;
-  line-height: 1.5;
-}
-
-.Denuncias p {
-  font-size: 1.15em;
-  margin: 30px;
-}
-
-.contenido {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  gap: 70px;
-  margin-top: 120px;
-  margin-left: 100px;
-
-}
-
-.Denuncia_Imagen {
-  height: 450px;
-  width: 480px;
-  border-radius: 50px;
-
-}
-
-.Indicacion {
+.linea{
+  border: none;
+  height: 1px;
+  background-color: #ababab;
   margin-top: 10px;
-  margin-right: 50px;
-
 }
 
-.Indicacion h2 {
-  font-size: 3rem;
+.usuario{
+  border: #282d4d;
 }
 
-.Indicacion p {
-  font-size: 1.15em;
-  font-weight: 400;
-  width: 1000px;
-  overflow-wrap: break-word;
-
+.InicioSesion{
+  text-decoration: none;
+  font-size: 10px;
+  color: #f57a47;
 }
 
+input, select, textarea {
+  border: 1px solid #493c2b24;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+  transition: all 0.3s ease;
+}
 
-input::placeholder {
+textarea{
+  outline: none;
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+textarea::placeholder {
   font-family: 'Montserrat', sans-serif;
   text-indent: 15px;
   color: grey;
@@ -215,60 +180,144 @@ input {
   box-sizing: border-box;
 }
 
-input,
-textarea {
-  width: 80%;
-  border-radius: 5px;
+.icono{
+  background-color: #282d4d;
   padding: 10px;
-
-  color: grey;
+  color: #ffffff;
+  border-radius: 100px;
+  cursor: pointer;
 }
 
-textarea {
-  min-width: 80%;
-  max-width: 80%;
-  font-family: 'Montserrat', sans-serif;
-
-}
-
-
-.checkbox-group input {
-  width: auto;
-  margin-left: 25px;
-}
-
-.checkbox-group {
+.containerTitulo{
+  justify-content: space-between;
   width: 100%;
+  padding: 10px 0;
+  gap: 10px;
 }
 
-.form-button-container {
+.containernombre{
+  justify-content: space-between;
   width: 100%;
+  padding: 10px 0;
+  gap: 10px;
 }
 
-.form-container button {
-  display: block;
+
+.containerMensaje{
+  width: 100%;
+  padding: 10px 0
+}
+
+.containerBoton{
+  display: flex;
+  padding: 5px 20px 0 0;
+  align-items: center;
+}
+
+.terminosYCondiciones{
+  font-size: 10px;
+  color: #282d4d;
+}
+
+.botonRegistro{
   background-color: #f57a47;
   color: #ffffff;
   border: none;
+  padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
-  transition: .3s;
-  width: 100px;
-  height: 35px;
-  margin: 20px auto 0 auto;
+  transition:  0.5s all ease;
 }
 
-.form-container button:hover {
-  background-color: #d6d9db;
+.botonRegistro:hover{
+  color: #ffffff;
+  background-color: #f7c63f;
+  border-radius: 10px;
 }
 
-form {
-  width: 95%;
-  max-width: 500px;
-  margin: 0 auto;
+
+.formularioGrupo{
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
 }
 
+.formularioInput{
+  padding-right: 30px;
+}
+
+.formularioValidacion-estado {
+  position: absolute;
+  top: 50%;
+  right: 10px; 
+  transform: translateY(-50%);
+  color: #ff0000;
+  pointer-events: none; 
+  opacity: 0;
+}
+
+.formularioInput-error{
+  margin-bottom: 10px;
+  font-size: 9px;
+  position: absolute;
+  display: none;
+}
+/*CSS LLAMADO POR EL JS*/
+.formularioInput-error-activo{
+  display: block;
+}
+
+
+.formularioCamposRequeridos{
+  color: #ac0303;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 10px;
+  display: none;
+}
+/*CSS LLAMADO POR EL JS*/
+.formularioCamposRequeridos-activo{
+  display: block;
+  margin-bottom: 5px;
+
+}
+
+.formularioGrupo-btn-enviar{
+  color: #009b00;
+}
+
+.formularioMensaje-exito{
+  color: #009b00;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 10px;
+  display: none;
+}
+/*CSS LLAMADO POR EL JS*/
+.formularioMensaje-exito-activo{
+  display: block;
+  margin-bottom: 5px;
+
+}
+/*------------------- VALIDACIONES ------------------- */
+
+.formularioGrupo-correcto .formularioValidacion-estado{
+  color: #009b00;
+  opacity: 1;
+}
+
+.formularioGrupo-incorrecto .formularioInput{
+  border: 1px solid #ac0303;
+}
+
+.formularioGrupo-incorrecto .formularioValidacion-estado{
+  color:  #ac0303;
+  opacity: 1;
+}
+
+
+/**Footer**/
 footer {
   padding: 47px 1% 0px 1%;
 }
@@ -588,4 +637,3 @@ textarea {
     width: 100%;
   }
 }
- 
