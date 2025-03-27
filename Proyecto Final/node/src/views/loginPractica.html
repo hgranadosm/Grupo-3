@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/loginPractica.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="/login" method="post">
+            <h2>Login</h2>
+            <div class="name">
+                <label for="usuario" class="subtext">Usuario</label>
+                <input type="text" id="usuario" name="usuario">
+            </div>
+
+            <div>
+                <label for="password" class="subtext">Contraseña</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <input type="submit" class="save" value="Login" onclick="location.reload()">
+        </form>
+    </div>
+</body>
+
+</html>
