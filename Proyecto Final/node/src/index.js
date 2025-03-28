@@ -41,6 +41,7 @@ app.listen(3000,()=>{
 
 //RUTAS
 //      nombre de la ruta, acción
+//PRACTICA EN CLASE
 app.get('/',(req,res)=>{
     res.render('paginaInicio.html');
 });
@@ -56,6 +57,108 @@ app.get('/formulario',(req,res)=>{
 app.get('/loginPractica',(req,res)=>{
     res.render('loginPractica.html');
 });
+
+
+//RUTAS PAGINAS COMPAÑEROS
+
+app.get('/cambioCorreo',(req,res)=>{
+    res.render('cambioCorreo.html');
+});
+
+app.get('/comiteCantonal',(req,res)=>{
+    res.render('comiteCantonal.html');
+});
+
+app.get('/controlVial',(req,res)=>{
+    res.render('controlVial.html');
+});
+
+app.get('/Denuncias',(req,res)=>{
+    res.render('Denuncias.html');
+});
+
+app.get('/feriaSalud',(req,res)=>{
+    res.render('feriaSalud.html');
+});
+
+app.get('/inicioSesion',(req,res)=>{
+    res.render('inicioSesion.html');
+});
+
+app.get('/paginaNoticia2',(req,res)=>{
+    res.render('paginaNoticia2.html');
+});
+
+app.get('/reciclaje',(req,res)=>{
+    res.render('reciclaje.html');
+});
+
+app.get('/recuperar',(req,res)=>{
+    res.render('recuperar.html');
+});
+
+
+
+
+// Rutas de mis funcionalidades
+
+app.get('/administradorIniciativas',(req,res)=>{
+    res.render('administradorIniciativas.html');
+});
+
+app.get('/consejoTablaDenuncias',(req,res)=>{
+    res.render('consejoTablaDenuncias.html');
+});
+
+app.get('/editarPerfil',(req,res)=>{
+    res.render('editarPerfil.html');
+});
+
+app.get('/formularioAvisosAdministrador',(req,res)=>{
+    res.render('formularioAvisosAdministrador.html');
+});
+
+app.get('/formularioIniciativas',(req,res)=>{
+    res.render('formularioIniciativas.html');
+});
+
+app.get('/index',(req,res)=>{
+    res.render('index.html');
+});
+
+app.get('/iniciativa',(req,res)=>{
+    res.render('iniciativa.html');
+});
+
+app.get('/paginaServicios',(req,res)=>{
+    res.render('paginaServicios.html');
+});
+
+app.get('/perfilUsuariosCiudadanos',(req,res)=>{
+    res.render('perfilUsuariosCiudadanos.html');
+});
+
+app.get('/registroDeUsuario',(req,res)=>{
+    res.render('registroDeUsuario.html');
+});
+
+app.get('/servicios',(req,res)=>{
+    res.render('servicios.html');
+});
+
+app.get('/usuarioIniciativas',(req,res)=>{
+    res.render('usuarioIniciativas.html');
+});
+
+app.get('/usuarioTablaDenuncias',(req,res)=>{
+    res.render('usuarioTablaDenuncias.html');
+});
+
+
+
+
+
+
 
 
 

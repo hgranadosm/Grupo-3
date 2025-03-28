@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <link rel="stylesheet" href="paginaNoticias2.css">
+    <link rel="stylesheet" href="css/headerFooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/usuarioIniciativas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+<body>
+ 
+    <header>
+        <div class="contenedorHeader">
+            <a href="/index" class="logoContentedor">
+                <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <nav class="menuHeader opciones">
+                <a class="menuEnlace" href="/paginaServicios">Servicios</a>
+                <a class="menuEnlace" href="/usuarioIniciativas">Iniciativas</a>
+                <a class="menuEnlace" href="#">Noticias</a>
+                <a class="menuEnlace" href="#">Avisos</a>
+                <a class="menuEnlace" href="#">Denuncias</a>
+                <a class="menuIconoEnlace" href="/editarPerfil">
+                    <i class="iconoMenu fa-solid fa-user"></i>                
+                </a>
+                <a class="boton" href="/inicioSesion">Cerrar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="tituloPrincipal"><h1>Registro Histórico <h1> </div>
+    <!-- Noticias -->
+    <div id="contenedorNoticias"></div>
+
+    <script src="js/paginaNoticias2.js"></script>
+    <footer>
+
+
+        <footer>
+            <div class="contenedorFooter">
+                <div class="primeraColumnaFooter">
+                    <img class="footerLogo" src="./img/LogoMuniBlanco.png" width="158px" alt="logo municipales">
+                </div>
+                <div class="footerColumna">
+                    <a href="/paginaServicios">Servicios</a>
+                    <a href="/usuarioIniciativas">Iniciativas</a>
+                    <a href="">Noticias</a>
+                    <a href="">Avisos</a>
+                    <a href="">Denuncias</a>
+                </div>
+                <div class="footerColumna redesColumna">
+                    <a href="https://www.instagram.com/gobmontesdeoca/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/gobmontesdeoca/"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/GobMontesDeOca"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCux4pfOGXArPst7ZyDjxpog"><i class="fa-brands fa-square-youtube fa-bounce"></i></a>
+                </div>
+            </div>
+            <div class="copyRight">
+                <p>Todos los derechos reservados Municipalidad de Montes de Oca</p>
+            </div>
+        </footer>
+
+</body>
+</html>
+
