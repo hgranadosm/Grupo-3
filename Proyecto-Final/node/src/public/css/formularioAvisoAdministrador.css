@@ -11,7 +11,6 @@ body{
     margin: auto;
     font-family: 'Montserrat', sans-serif;
 }
-
 /* --------------------- MENU --------------------- */
 
 header{
@@ -101,8 +100,7 @@ nav .menuEnlace:hover{
     background-color: none;
 }
 
-
-/* Formulario */
+/* ----------------------- Formulario -----------------------  */
 
 
 .containerPadre{
@@ -120,13 +118,6 @@ nav .menuEnlace:hover{
     justify-content: space-between;
     padding: 10px 0;
     align-items: center;
-}
-
-.linea{
-    border: none;
-    height: 1px;
-    background-color: #ababab;
-    margin-top: 10px;
 }
 
 .usuario{
@@ -155,6 +146,7 @@ textarea{
 }
 
 textarea::placeholder {
+
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -183,14 +175,6 @@ input:hover, select:hover, textarea:hover {
     padding: 3px;
 }
 
-.icono{
-    background-color: #282d4d;
-    padding: 10px;
-    color: #ffffff;
-    border-radius: 100px;
-    cursor: pointer;
-}
-
 .containerTitulo{
     justify-content: space-between;
     width: 100%;
@@ -198,13 +182,12 @@ input:hover, select:hover, textarea:hover {
     gap: 10px;
 }
 
-.containernombre{
+.containerFecha{
     justify-content: space-between;
     width: 100%;
     padding: 10px 0;
     gap: 10px;
 }
-
 
 .containerMensaje{
     width: 100%;
@@ -239,7 +222,6 @@ input:hover, select:hover, textarea:hover {
     border-radius: 10px;
 }
 
-
 .formularioGrupo{
     position: relative;
     display: block;
@@ -269,6 +251,7 @@ input:hover, select:hover, textarea:hover {
 /*CSS LLAMADO POR EL JS*/
 .formularioInput-error-activo{
     display: block;
+    margin-top: 1px;
 }
 
 

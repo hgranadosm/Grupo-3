@@ -88,28 +88,53 @@ $inputs.forEach((input) => {
 });
 
 
-$formulario.addEventListener('submit', (e) => {
+$formulario.addEventListener('submit', async (e) => {
     e.preventDefault(); 
 
+    // aquí tomo los elementos que tienen mensajes informativos
     const $formularioCamposRequeridos = document.getElementById('formularioCamposRequeridos');
     const $formularioMensajeExito = document.getElementById('formularioMensaje-exito');
+    const $errorEnApi = document.getElementById('ErrorEnApi');
+
+    $errorEnApi.classList.remove('formularioCamposRequeridos-activo'); // le quito cualquier clase activa al div de error del api
 
     if (campos.titulo && campos.fecha && campos.descripcion) {
-        $formularioMensajeExito.classList.add('formularioMensaje-exito-activo');
-        $formularioCamposRequeridos.classList.remove('formularioCamposRequeridos-activo');
 
-        document.querySelectorAll('.formularioGrupo-correcto').forEach((icono) => {
-            icono.classList.remove('formularioGrupo-correcto');
+        //agarro la info del form
+        const formData = new FormData($formulario);
+        const datosFormulario = JSON.stringify(Object.fromEntries(formData.entries())); // la convierto a texto
+
+
+        // llamo al api
+        const response = await fetch('/avisos', {
+            method: 'POST',
+            body: datosFormulario,
+            headers: {
+                'Content-Type': 'application/json'
+            }
         });
 
-        $formulario.reset();
-
-        setTimeout(() => {
-            $formularioMensajeExito.classList.remove('formularioMensaje-exito-activo');
-            location.reload();
-        }, 2000);
-
+        //evaluo la respuesta
+        if(response.ok) {
+            $formularioMensajeExito.classList.add('formularioMensaje-exito-activo');
+            $formularioCamposRequeridos.classList.remove('formularioCamposRequeridos-activo');
+            document.querySelectorAll('.formularioGrupo-correcto').forEach((icono) => {
+                icono.classList.remove('formularioGrupo-correcto');
+            });    
+            $formulario.reset();
+            setTimeout(() => {
+                $formularioMensajeExito.classList.remove('formularioMensaje-exito-activo');
+                location.reload();
+            }, 2000);
+        } else {
+            //esta parte se ejecuta cuando el api da error
+            $errorEnApi.innerText = response.statusText;
+            $errorEnApi.classList.add('formularioCamposRequeridos-activo');
+        }
     } else {
+        // esta parte se ejecuta cuando las validaciones de los campos están mal
+        $errorEnApi.classList.remove('formularioCamposRequeridos-activo');
         $formularioCamposRequeridos.classList.add('formularioCamposRequeridos-activo');
     }
 });
+        

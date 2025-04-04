@@ -190,6 +190,7 @@ input:hover, select:hover, textarea:hover {
 /*CSS LLAMADO POR EL JS*/
 .formularioInput-error-activo{
     display: block;
+    margin-top: 1px;
 }
 
 .formularioCamposRequeridos{

@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
+
 body{
     background-color: #ffffff;
     color: #282d4d;
     margin: auto;
     font-family: 'Montserrat', sans-serif;
 }
-
 
 /* --------------------- MENU --------------------- */
 
@@ -101,22 +101,32 @@ nav .menuEnlace:hover{
     background-color: none;
 }
 
-/* --------------------- CONTENIDO --------------------- */
+
+/* Formulario */
+
 
 .containerPadre{
     max-width: 650px;
     margin: auto;
+    background-color: #ffffff;
     padding: 40px;
     margin-top: 50px;
     border-radius: 20px;
     margin-top: 150px;
 }
 
-.containerTitulo{
+.containerTituloImagen{
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
     align-items: center;
+}
+
+.linea{
+    border: none;
+    height: 1px;
+    background-color: #ababab;
+    margin-top: 10px;
 }
 
 .usuario{
@@ -125,12 +135,12 @@ nav .menuEnlace:hover{
 
 .InicioSesion{
     text-decoration: none;
-    font-size: 12px;
+    font-size: 10px;
     color: #f57a47;
 }
 
 input, select, textarea {
-    border: 1px solid #2b493224;
+    border: 1px solid #493c2b24;
     border-radius: 5px;
     padding: 10px;
     width: 100%;
@@ -150,7 +160,6 @@ textarea::placeholder {
 
 .menuDesplegable select{
     width: 100%;
-    max-height: 37px;
     outline: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -179,39 +188,23 @@ input:hover, select:hover, textarea:hover {
     padding: 10px;
     color: #ffffff;
     border-radius: 100px;
+    cursor: pointer;
 }
 
-.containerNombre{
-    display: flex;
+.containerTitulo{
     justify-content: space-between;
     width: 100%;
     padding: 10px 0;
     gap: 10px;
-    margin-bottom: 5px;
 }
 
-.containerCorreo{
-    display: flex;
-    width: 100%;
-    padding: 10px 0;
-    gap: 10px;
-}
-
-.containerContraseña{
-    display: flex;
+.containernombre{
     justify-content: space-between;
     width: 100%;
-    gap: 10px;
     padding: 10px 0;
+    gap: 10px;
 }
 
-.correoPerfil{
-    width: 50%;
-}
-
-.menuDesplegable{
-    width: 50%;
-}
 
 .containerMensaje{
     width: 100%;
@@ -224,9 +217,8 @@ input:hover, select:hover, textarea:hover {
     align-items: center;
 }
 
-.terminosYCondiciones p{
+.terminosYCondiciones{
     font-size: 10px;
-    padding: 0;
     color: #282d4d;
 }
 
@@ -238,13 +230,12 @@ input:hover, select:hover, textarea:hover {
     border-radius: 10px;
     cursor: pointer;
     font-size: 15px;
-    transition: .3s;
+    transition:  0.5s all ease;
 }
 
 .botonRegistro:hover{
     color: #ffffff;
-    background-color: #f5aa47;
-    border: none;
+    background-color: #f7c63f;
     border-radius: 10px;
 }
 
@@ -269,18 +260,18 @@ input:hover, select:hover, textarea:hover {
     opacity: 0;
 }
 
-
 .formularioInput-error{
     margin-bottom: 10px;
     font-size: 9px;
     position: absolute;
     display: none;
 }
-
 /*CSS LLAMADO POR EL JS*/
 .formularioInput-error-activo{
     display: block;
+    margin-top: 1px;
 }
+
 
 .formularioCamposRequeridos{
     color: #ac0303;
@@ -289,12 +280,12 @@ input:hover, select:hover, textarea:hover {
     margin-top: 10px;
     display: none;
 }
-
 /*CSS LLAMADO POR EL JS*/
 .formularioCamposRequeridos-activo{
     display: block;
-}
+    margin-bottom: 5px;
 
+}
 
 .formularioGrupo-btn-enviar{
     color: #009b00;
@@ -307,12 +298,12 @@ input:hover, select:hover, textarea:hover {
     margin-top: 10px;
     display: none;
 }
-
 /*CSS LLAMADO POR EL JS*/
 .formularioMensaje-exito-activo{
     display: block;
-}
+    margin-bottom: 5px;
 
+}
 
 
 /*------------------- VALIDACIONES ------------------- */
@@ -420,10 +411,6 @@ footer {
     padding: 20px;
 }
 
-.identificacionInput, .telefonoInput {
-    width: 50%;
-}
-
 
 
 /* --------------------- MEDIA QUARIES --------------------- */
@@ -493,11 +480,7 @@ footer {
     }
     .tituloContacto {
         font-size: 1.5rem;
-    }   
-    .identificacionInput, .telefonoInput {
-        width: 100%;
-    }
-     
+    }    
 }
 
 
@@ -519,34 +502,15 @@ footer {
 }
 
 
-/*------------------- RESPONSIVE ------------------- */
-
+/* ------ Formulario ------ */
 @media screen and (max-width: 992px) {
     .containerNombre, .containerCorreo{
         flex-direction: column;
-        padding: 3px;
     }
     .nombre, .primerApellido, .segundoApellido, .correo, .Identificacion, .telefono {
         margin-bottom: 10px;
     }
-    .correoPerfil, .distrito{
-        width: 100%;
-    }
-    .containerContraseña {
-        flex-wrap: wrap;
-    }
 }
-
-@media screen and (max-width: 450px){
-    .containerBoton{
-        flex-direction: column;
-        text-align: center;
-    }
-    .terminosYCondiciones{
-        margin-bottom: 10px;
-    }
-}
-
 
 /* ------ Footer ------ */
 @media screen and (max-width: 522px) {
@@ -562,9 +526,5 @@ footer {
         flex-direction: row;
         gap: 10px;
     }
-}
-
-input:disabled {
-    background-color: #ebeaea;
 }
 

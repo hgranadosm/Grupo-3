@@ -10,7 +10,7 @@ const expresiones = {
     correo:/^[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]+$/,
     identificacion: /^\d{9,11}$/,
     telefono: /^\d{8,11}$/,
-    contraseña: /^.{4,12}$/,
+    contrasena: /^.{4,12}$/,
     detalle: /^(?=[\s\S]{4,300}$)[a-zA-Z0-9áéíóúÁÉÍÓÚüÜ,.-\s;]+$/,
 };
 
@@ -22,7 +22,7 @@ const campos = {
     correo: false,
     identificacion: false,
     telefono: false,
-    contraseña: false,
+    contrasena: false,
     detalle: false,
 };
 
@@ -47,8 +47,8 @@ const validarFormulario = (e) => {
         case "telefono":
             validarCampo(expresiones.telefono, e.target, "Telefono");
             break;
-        case "contraseña":
-            validarCampo(expresiones.contraseña, e.target, "Contraseña");
+        case "contrasena":
+            validarCampo(expresiones.contrasena, e.target, "Contrasena");
             break;
         case "detalle":
             validarCampo(expresiones.detalle, e.target, "detalle");
@@ -85,30 +85,50 @@ $inputs.forEach((input) => {
 });
 
 
-$formulario.addEventListener('submit', (e) => {
+$formulario.addEventListener('submit', async (e) => {
     e.preventDefault(); 
 
+    // aquí tomo los elementos que tienen mensajes informativos
     const $formularioCamposRequeridos = document.getElementById('formularioCamposRequeridos');
     const $formularioMensajeExito = document.getElementById('formularioMensaje-exito');
+    const $errorEnApi = document.getElementById('ErrorEnApi');
 
-    if (campos.nombre && campos.apellido1 && campos.apellido2 && campos.correo && campos.identificacion && campos.telefono && campos.contraseña && campos.detalle) {
+    $errorEnApi.classList.remove('formularioCamposRequeridos-activo'); // le quito cualquier clase activa al div de error del api
 
-        
-        $formularioMensajeExito.classList.add('formularioMensaje-exito-activo');
-        $formularioCamposRequeridos.classList.remove('formularioCamposRequeridos-activo');
+    if (campos.nombre && campos.apellido1 && campos.apellido2 && campos.correo && campos.identificacion && campos.telefono && campos.contrasena && campos.detalle) {
+        //agarro la info del form
+        const formData = new FormData($formulario);
+        const datosFormulario = JSON.stringify(Object.fromEntries(formData.entries())); // la convierto a texto
 
-        document.querySelectorAll('.formularioGrupo-correcto').forEach((icono) => {
-            icono.classList.remove('formularioGrupo-correcto');
+        // llamo al api
+        const response = await fetch('/register', {
+            method: 'POST',
+            body: datosFormulario,
+            headers: {
+                'Content-Type': 'application/json'
+            }
         });
 
-        $formulario.reset();
-
-        setTimeout(() => {
-            $formularioMensajeExito.classList.remove('formularioMensaje-exito-activo');
-            location.reload();
-        }, 2000);
-
+        //evaluo la respuesta
+        if(response.ok) {
+            $formularioMensajeExito.classList.add('formularioMensaje-exito-activo');
+            $formularioCamposRequeridos.classList.remove('formularioCamposRequeridos-activo');
+            document.querySelectorAll('.formularioGrupo-correcto').forEach((icono) => {
+                icono.classList.remove('formularioGrupo-correcto');
+            });    
+            $formulario.reset();
+            setTimeout(() => {
+                $formularioMensajeExito.classList.remove('formularioMensaje-exito-activo');
+                location.reload();
+            }, 2000);
+        } else {
+            //esta parte se ejecuta cuando el api da error
+            $errorEnApi.innerText = response.statusText;
+            $errorEnApi.classList.add('formularioCamposRequeridos-activo');
+        }
     } else {
+        // esta parte se ejecuta cuando las validaciones de los campos están mal
+        $errorEnApi.classList.remove('formularioCamposRequeridos-activo');
         $formularioCamposRequeridos.classList.add('formularioCamposRequeridos-activo');
     }
 });

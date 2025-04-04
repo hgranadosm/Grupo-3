@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f1f5f9;
+    color: #282d4d;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.containerPadre{
+    max-width: 500px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 40px;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+
+.containerTitulo{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.usuario{
+    border: #282d4d;
+}
+
+.InicioSesion{
+    text-decoration: none;
+    font-size: 12px;
+    color: #f57a47;
+}
+
+input, select {
+    border: 1px solid #2b493224;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:hover, select:hover {
+    border: 1px solid #ababab; 
+}
+
+.containerCorreo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.containerBoton{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    align-items: center;
+}
+
+.olvido{
+    font-size: 10px;
+    padding: 0;
+    color: #282d4d;
+    text-decoration: none;
+}
+
+.botonRegistro{
+    background-color: #f57a47;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.botonRegistro:hover{
+    color: #ffffff;
+    background-color: #f5aa47;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.formularioGrupo{
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formularioInput{
+    padding-right: 30px;
+}
+
+.formularioValidacion-estado {
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    color: #ff0000;
+    pointer-events: none; 
+    opacity: 0;
+}
+
+
+.formularioInput-error{
+    margin-bottom: 10px;
+    font-size: 9px;
+    position: absolute;
+    display: none;
+}
+
+/*CSS LLAMADO POR EL JS*/
+.formularioInput-error-activo{
+    display: block;
+    margin-top: 1px;
+}
+
+.formularioCamposRequeridos{
+    color: #ac0303;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+    display: none;
+}
+
+/*CSS LLAMADO POR EL JS*/
+.formularioCamposRequeridos-activo{
+    display: block;
+}
+
+
+.formularioGrupo-btn-enviar{
+    color: #009b00;
+}
+
+.formularioMensaje-exito{
+    color: #009b00;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+    display: none;
+}
+
+/*CSS LLAMADO POR EL JS*/
+.formularioMensaje-exito-activo{
+    display: block;
+}
+
+
+
+/*------------------- VALIDACIONES ------------------- */
+
+.formularioGrupo-correcto .formularioValidacion-estado{
+    color: #009b00;
+    opacity: 1;
+}
+
+.formularioGrupo-incorrecto .formularioInput{
+    border: 1px solid #ac0303;
+}
+
+.formularioGrupo-incorrecto .formularioValidacion-estado{
+    color:  #ac0303;
+    opacity: 1;
+}
+
+/*------------------- RESPONSIVE ------------------- */
+
+@media screen and (max-width: 992px) {
+    .containerNombre, .containerCorreo{
+        flex-direction: column;
+        padding: 3px;
+    }
+    .nombre, .primerApellido, .segundoApellido, .correo, .Identificacion, .telefono {
+        margin-bottom: 10px;
+    }
+    .distrito, .contrasena {
+        width: 100%;
+    }
+    .containerContraseña{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .containerBoton{
+        flex-direction: column;
+        text-align: center;
+    }
+    .terminosYCondiciones{
+        margin-bottom: 10px;
+    }
+}
+

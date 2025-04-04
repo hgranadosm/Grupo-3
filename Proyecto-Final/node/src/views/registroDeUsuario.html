@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <form action="" class="formulario" id="formulario">
+        <form class="formulario" id="formulario" novalidate>
 
             <div class="containerNombre">
 
@@ -89,8 +89,8 @@
             <div class="containerContraseña">
 
                 <!-- Grupo Contraseña -->
-                <div class="formularioGrupo contrasena" id="grupoContraseña">
-                    <input type="password" class="formularioInput" name="contraseña" id="contraseña"
+                <div class="formularioGrupo contrasena" id="grupoContrasena">
+                    <input type="password" class="formularioInput" name="contrasena" id="contrasena"
                         placeholder="Contraseña">
                     <i class='bx formularioValidacion-estado'></i>
                     <p class="formularioInput-error">Ingrese una contraseña válida (4-12 caracteres).</p>
@@ -131,6 +131,9 @@
 
             <div class="formularioCamposRequeridos" id="formularioCamposRequeridos">
                 <p><b>Por favor completa correctamente el formulario</b></p>
+            </div>
+
+            <div class="formularioCamposRequeridos" id="ErrorEnApi">
             </div>
 
             <div class="formularioMensaje-exito" id="formularioMensaje-exito">

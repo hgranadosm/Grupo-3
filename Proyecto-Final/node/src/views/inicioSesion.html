@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/inicioSesio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Iniciar sesion</title>
+</head>
+
+<body>
+
+    <div class="containerPadre">
+        <div class="containerTitulo">
+            <h3 class="tituloRegistro">Iniciar Sesión</h3>
+            <a class="InicioSesion" href="/registroDeUsuario">Registrarse</a>
+        </div>
+
+        <form action="" class="formulario" id="formulario">
+
+            <div class="containerCorreo">
+
+                <!-- Grupo Correo Electrónico y contraseña -->
+                <div class="formularioGrupo" id="grupoCorreo">
+                    <input type="email" class="formularioInput" name="correo" id="correo"
+                        placeholder="Correo electrónico">
+                    <i class='bx formularioValidacion-estado'></i>
+                    <p class="formularioInput-error">Ingrese un correo válido.</p>
+                </div>
+
+                <!-- Grupo Contraseña -->
+                <div class="formularioGrupo password" id="grupoPassword">
+                    <input type="password" class="formularioInput" name="password" id="password"
+                        placeholder="Contraseña">
+                    <i class='bx formularioValidacion-estado'></i>
+                    <p class="formularioInput-error">Ingrese una contraseña válida (4-12 caracteres).</p>
+                </div>
+   
+            </div>
+
+
+            <div class="containerBoton">
+                <div class="terminosYCondiciones">
+                    <a href="#" class="olvido">¿Has olvidado tu contraseña?</a>
+                </div>
+
+                <div class="containerBoton">
+                    <button type="submit" class="botonRegistro">Continuar</button>
+                </div>
+            </div>
+
+            <div class="formularioCamposRequeridos" id="formularioCamposRequeridos">
+                <p><b>Por favor completa correctamente el formulario</b></p>
+            </div>
+
+            <div class="formularioCamposRequeridos" id="ErrorEnApi">
+            </div>
+
+            <div class="formularioMensaje-exito" id="formularioMensaje-exito">
+                <p><b>¡Formulario enviado exitosamente!</b></p>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="js/inicioSesion.js"></script>
+
+</body>
+
+</html>
