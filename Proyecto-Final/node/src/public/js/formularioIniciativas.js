@@ -107,3 +107,7 @@ $formulario.addEventListener('submit', async (e) => {
         $formularioCamposRequeridos.classList.add('formularioCamposRequeridos-activo');
     }
 });
+
+function preventBack() { window.history.forward(); }
+setTimeout("preventBack()", 0);
+window.onunload = function () { null };
