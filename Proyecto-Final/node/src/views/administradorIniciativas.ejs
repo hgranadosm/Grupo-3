@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciativas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="css/usuarioIniciativas.css">
+    <link rel="stylesheet"  href="css/administradorIniciativas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -14,11 +14,10 @@
 </head>
 
 <body>
-
-    <!--MENU-->
+        <!--MENU-->
     <header>
         <div class="contenedorHeader">
-            <a href="/index" class="logoContentedor">
+            <a href="./index.html" class="logoContentedor">
                 <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
                 <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
             </a>
@@ -28,75 +27,69 @@
             </label>
             <nav class="menuHeader opciones">
                 <a class="menuEnlace" href="/paginaServicios">Servicios</a>
-                <a class="menuEnlace" href="/usuarioIniciativas">Iniciativas</a>
+                <a class="menuEnlace" href="/administradorIniciativas">Iniciativas</a>
                 <a class="menuEnlace" href="/paginaNoticia2">Noticias</a>
                 <a class="menuEnlace" href="/formularioAvisosAdministrador">Avisos</a>
                 <a class="menuEnlace" href="/Denuncias">Denuncias</a>
                 <a class="menuIconoEnlace" href="/editarPerfil">
                     <i class="iconoMenu fa-solid fa-user"></i>                
                 </a>
-                <a class="boton" href="/inicioSesion">Cerrar sesión</a>
+                <a class="boton" onclick="cerrarSesion()" >Cerrar sesión</a>
             </nav>
         </div>
     </header>
 
-    <!--Iniciativas-->
+    <!--TABLA-->
+    <h1 class="tituloTabla">Administración de Iniciativas</h1>
+    <div class="contenedorTablaResponsive">
+        <table class="contenedorTabla">
+            <tr class="filas">
+                <th class="titulosId">#</th>
+                <th class="titulos nombreIniciativa">Nombre de la Iniciativa</th>
+                <th class="titulos">Descripción</th>
+                <th class="titulos usuarioPropuesta">Propuesto Por</th>
+                <th class="titulos">Estado</th>
+                <th class="titulos">Acciones</th>
+            </tr>
 
-
-    <div class="container">
-        <div class="contenedor-titulo">
-            <h2 class="titulo decorado">Iniciativas</h2>
-        </div>
-        <div class="texto3">
-            <p>"Descubre las iniciativas que transforman Montes de Oca. Sé parte del cambio participando en proyectos que mejoran nuestra comunidad. ¡Tu voz y acción cuentan!"</p>
-        </div>
-
-        <div class="contenedorBoton">
-            <a href="/formularioIniciativas" class="iniciativaBoton">Crea tu iniciativa</a>
-        </div>
-
-        <div class="cards">
-            <div class="card">
-                <i class="iconCard fa-solid fa-tree-city"></i>
-                <h3>Reciclaje en parques</h3>
-                <a class="enlace" href="/iniciativa">Ver información <i class="flecha fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card">
-                <i class="iconCard fa-solid fa-road"></i>
-                <h3>Mejoras en aceras</h3>
-                <a class="enlace" href="/iniciativa">Ver información <i class="flecha fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card">
-                <i class="iconCard fa-solid fa-lightbulb"></i>
-                <h3>Iluminación en parques públicos</h3>
-                <a class="enlace" href="/iniciativa">Ver información <i class="flecha fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card">
-                <i class="iconCard fa-solid fa-sun-plant-wilt"></i>
-                <h3>Reforestación urbana</h3>
-                <a class="enlace" href="/iniciativa">Ver información <i class="flecha fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card">
-                <i class="iconCard fa-solid fa-futbol"></i>
-                <h3>Zonas de juegos infantiles</h3>
-                <a class="enlace" href="/iniciativa">Ver información <i class="flecha fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card">
-                <i class="iconCard fa-solid fa-video"></i>
-                <h3>Cámaras de seguridad en parques</h3>
-                <a class="enlace" href="/iniciativa">Ver información <i
-                        class="flecha fa-solid fa-arrow-right"></i></a>
-            </div>
-
-        
-
-        </div>
+            <% iniciativas.forEach((item, index) => { %>
+                <tr>
+                    <td class="descripcion"><%= index + 1 %></td>
+                    <td class="descripcion"><%= item.titulo %></td>
+                    <td class="descripcion"><%= item.descripcion %></td>
+                    <td class="descripcion"><%= item.nombre %></td>
+                    <td class="status">
+                        <p class="<%= item.estado === 'Aprobada' ? 'aprobado' : (item.estado === 'Rechazada' ? 'rechazado' : '') %>">
+                        <%= item.estado %>
+                        </p>
+                    </td>
+                    <td class="contenedorBotones">
+                        <% if (item.estado !== 'Aprobada') { %>
+                            <button 
+                                class="boton1 <%= item.estado !== 'Pendiente' ? 'w-100' : '' %>" 
+                                onclick="actualizarEstado('<%= item._id %>', 'Aprobada')">
+                                Aprobar
+                            </button>
+                        <% } %>
+                        <% if (item.estado !== 'Rechazada') { %>
+                            <button 
+                                class="boton2 <%= item.estado !== 'Pendiente' ? 'w-100' : '' %>" 
+                                onclick="actualizarEstado('<%= item._id %>', 'Rechazada')">
+                                Rechazar
+                            </button>
+                        <% } %>
+                    </td>
+                </tr>
+            <% }) %>
+    
+            <tr>
+                <td class="final" colspan="5">Fin de las iniciativas</td>
+            </tr>
+        </table>
     </div>
+
+
+
     <!--FOOTER-->
     <footer>
         <div class="contenedorFooter">
@@ -105,7 +98,7 @@
             </div>
             <div class="footerColumna">
                 <a href="/paginaServicios">Servicios</a>
-                <a href="/usuarioIniciativas">Iniciativas</a>
+                <a href="/administradorIniciativas">Iniciativas</a>
                 <a href="/paginaNoticia2">Noticias</a>
                 <a href="/formularioAvisosAdministrador">Avisos</a>
                 <a href="/Denuncias">Denuncias</a>
@@ -122,6 +115,7 @@
         </div>
     </footer>
 
+    <script src="js/administradorIniciativas.js"></script>
 </body>
 
 </html>

@@ -270,3 +270,8 @@ input:hover, select:hover, textarea:hover {
     }
 }
 
+.tituloAtrasContenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -12,10 +12,20 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json()); //req.body
 app.use(bodyParser.urlencoded({extended:false}));
 
+//Configuración de Express Session
+const session = require('express-session');
+app.use(session({
+    secret: 'LALYAPP',
+    resave: false,
+    saveUninitialized: false,
+}))
+
+
 //Modelos
 const user = require('../models/users.js');
 const iniciativas = require('../models/iniciativas.js');
 const avisos = require('../models/avisos.js');
+const { findSourceMap } = require('module');
 
 
 /*
@@ -45,23 +55,24 @@ app.listen(3000,()=>{
 })
 
 
+// verificar la sesión función (middleware)
+function verificarSesion(req, res, next) {
+    if (req.session.usuario) {
+        console.log('logueado correctamente')
+        return next(); // Si hay sesión, continua 
+    } else {
+        console.log('usuario no logueado redireccionando')
+        res.redirect('/inicioSesion'); // Redirigir al login si no hay sesión
+    }
+}
+
+
+
 //RUTAS
 //      nombre de la ruta, acción
 //PRACTICA EN CLASE
 app.get('/',(req,res)=>{
     res.render('paginaInicio.html');
-});
-
-app.get('/registro',(req,res)=>{
-    res.render('registro.html');
-});
-
-app.get('/formulario',(req,res)=>{
-    res.render('formulario.html');
-});
-
-app.get('/loginPractica',(req,res)=>{
-    res.render('loginPractica.html');
 });
 
 
@@ -108,29 +119,51 @@ app.get('/recuperar',(req,res)=>{
 
 // Rutas de mis funcionalidades
 
-app.get('/administradorIniciativas',(req,res)=>{
-    res.render('administradorIniciativas.html');
+app.get('/administradorIniciativas',  verificarSesion,  async (req, res) => {
+    try {
+        const listaIniciativas = await iniciativas.find(); // trae todas las iniciativas
+        res.render('administradorIniciativas.ejs', { iniciativas: listaIniciativas });
+    } catch (err) {
+        console.error('Error al cargar iniciativas:', err);
+        res.status(500).send('Error al obtener las iniciativas');
+    }
 });
 
 app.get('/consejoTablaDenuncias',(req,res)=>{
     res.render('consejoTablaDenuncias.html');
 });
 
-app.get('/editarPerfil',(req,res)=>{
-    res.render('editarPerfil.html');
+app.get('/editarPerfil', verificarSesion, async (req,res)=>{
+    try {
+        const usuario = await user.findOne({ correo: req.session.usuario });
+        if (!usuario) {
+            return res.redirect('/inicioSesion');
+        }
+        const usuarioLogueado = req.session.usuario || null;
+        const rol = req.session.rol || null;
+        res.render('editarPerfil.ejs', { usuario, usuarioLogueado, rol }); // Asegurate que sea .ejs si vas a usar variables
+    } catch (err) {
+        console.error('Error al obtener el usuario', err);
+        res.status(500).send('Error del servidor');
+    }
 });
 
-app.get('/formularioAvisosAdministrador',(req,res)=>{
-    res.render('formularioAvisosAdministrador.html');
+app.get('/formularioAvisosAdministrador', verificarSesion, (req,res)=>{
+    const usuarioLogueado = req.session.usuario || null;
+    const rol = req.session.rol || null;
+    res.render('formularioAvisosAdministrador.ejs', { usuarioLogueado, rol });
 });
 
 app.get('/formularioIniciativas',(req,res)=>{
     res.render('formularioIniciativas.html');
 });
 
-app.get('/index',(req,res)=>{
-    res.render('index.html');
+app.get('/index', (req, res) => {
+    const usuarioLogueado = req.session.usuario || null;
+    const rol = req.session.rol || null;
+    res.render('index.ejs', { usuarioLogueado, rol });
 });
+
 
 app.get('/iniciativa',(req,res)=>{
     res.render('iniciativa.html');
@@ -152,19 +185,16 @@ app.get('/servicios',(req,res)=>{
     res.render('servicios.html');
 });
 
-app.get('/usuarioIniciativas',(req,res)=>{
-    res.render('usuarioIniciativas.html');
+app.get('/usuarioIniciativas', (req, res) => {
+    const usuarioLogueado = req.session.usuario || null;
+    const rol = req.session.rol || null;
+    res.render('usuarioIniciativas.ejs', { usuarioLogueado, rol });
 });
 
 app.get('/usuarioTablaDenuncias',(req,res)=>{
     res.render('usuarioTablaDenuncias.html');
 });
 
-// Rutas practicas en clase
-
-app.get('/loginPracticaClase',(req,res)=>{
-    res.render('loginPracticaClase.html')
-})
 
 
 
@@ -188,7 +218,6 @@ app.post('/addCategory',(req,res)=>{
 
 
 
-// Practica login en clase ----------------------------------------------------------------------------------------
 //Usuarios
 
 
@@ -202,7 +231,8 @@ app.post('/register', (req,res) => {
         telefono:req.body.telefono,
         distrito:req.body.menuDesplegable,
         detalles:req.body.detalle,
-        contrasena:req.body.contrasena
+        contrasena:req.body.contrasena,
+        rol:"usuario"
     })
 
     data.save()
@@ -231,6 +261,7 @@ app.post('/iniciativas', (req,res) => {
         titulo:req.body.titulo,
         nombre:req.body.nombre,
         descripcion:req.body.descripcion,
+        estado:"Pendiente"
     })
 
     data.save()
@@ -320,6 +351,8 @@ app.post('/login',(req,res)=>{
             //Paso 3: Verificar si el correo y las contraseñas coinciden
             if(usuario.contrasena==data.password){
                 console.log("Ingresó exitosamente");
+                req.session.usuario = usuario.correo; // guardado de la sesión
+                req.session.rol = usuario.rol;
                 res.status(201).json({ok: true})
             }else{
                 console.log("Las contraseñas no coinciden")
@@ -335,4 +368,62 @@ app.post('/login',(req,res)=>{
     }
     usuarioExiste();
 
+}) 
+
+app.post('/editProfile', async (req, res) => {
+    if (!req.session.usuario) {
+        return res.status(401).json({ ok: false, message: 'No autorizado' });
+    }
+
+    try {
+        const actualizado = await user.findOneAndUpdate(
+            { correo: req.session.usuario }, // Busco el usuario logueado
+            {
+                nombre: req.body.nombre,
+                apellido1: req.body.apellido1,
+                apellido2: req.body.apellido2,
+                identificacion: req.body.identificacion,
+                telefono: req.body.telefono,
+                distrito: req.body.menuDesplegable,
+                detalles: req.body.detalle,
+            },
+            { new: true } // asi es como en mongo devuelvo los datos ya actualizados
+        );
+
+        if (!actualizado) {
+            return res.status(404).json({ ok: false, message: 'Usuario no encontrado' });
+        }
+
+        res.statusMessage = 'Perfil actualizado correctamente';
+        res.status(200).json({ ok: true });
+    } catch (err) {
+        console.error('Error al actualizar perfil:', err);
+        res.statusMessage = 'Error al actualizar el perfil';
+        res.status(500).json({ ok: false });
+    }
+});
+
+app.post('/actualizarEstado/:id', async (req, res) => {
+    const { id } = req.params;
+    const { nuevoEstado } = req.body;
+
+    try {
+        await iniciativas.findByIdAndUpdate(id, { estado: nuevoEstado });
+        res.status(200).json({ mensaje: 'Estado actualizado correctamente' });
+    } catch (error) {
+        console.error('Error al actualizar el estado:', error);
+        res.status(500).json({ mensaje: 'Error al actualizar el estado' });
+    }
+});
+
+// Destrucción de la sesión
+app.post('/logout',(req,res)=>{
+    req.session.destroy((err) => {
+        if (err) {
+            return res.status(500).json({ ok: false });
+        } else {
+            console.log('cerrando sesión y redireccionando')
+            res.redirect('/inicioSesion'); // Redirigir al login después de cerrar sesión
+        }
+    });
 }) 

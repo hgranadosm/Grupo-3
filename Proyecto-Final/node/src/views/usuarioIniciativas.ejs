@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciativas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/usuarioIniciativas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--MENU-->
+    <% if (usuarioLogueado) { %>
+        <header>
+            <div class="contenedorHeader">
+                <a href="/index" class="logoContentedor">
+                    <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                    <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+                </a>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <nav class="menuHeader opciones">
+                    <a class="menuEnlace" href="/paginaServicios">Servicios</a>
+                    <a class="menuEnlace" href="<%= rol === 'admin' ? '/administradorIniciativas' : '/usuarioIniciativas' %>">Iniciativas</a>
+                    <a class="menuEnlace" href="/paginaNoticia2">Noticias</a>
+                    <a class="menuEnlace" href="/formularioAvisosAdministrador">Avisos</a>
+                    <a class="menuEnlace" href="/Denuncias">Denuncias</a>
+                    <a class="menuIconoEnlace" href="/editarPerfil">
+                        <i class="iconoMenu fa-solid fa-user"></i>                
+                    </a>
+                    <a class="boton" onclick="cerrarSesion()" >Cerrar sesión</a>
+                </nav>
+            </div>
+        </header>
+        <% } else { %>
+        <header>
+            <div class="contenedorHeader">
+                <a href="/index" class="logoContentedor">
+                    <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                    <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+                </a>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <nav class="menuHeader opciones">
+                    <a href="/paginaServicios">Servicios<span></span></a>
+                    <a href="/usuarioIniciativas">Iniciativas<span></span></a>
+                    <a href="/index">Noticias<span></span></a>
+                    <a href="/index">Avisos<span></span></a>
+                    <a href="/index">Denuncias<span></span></a>
+                    <a class="boton" href="/registroDeUsuario">Regístrate</a>
+                    <a class="boton" href="/inicioSesion">Inicia sesión</a>
+                </nav>
+            </div>
+        </header>
+        <% } %>
+
+    <!--Iniciativas-->
+
+
+    <div class="container">
+        <div class="contenedor-titulo">
+            <h2 class="titulo decorado">Iniciativas</h2>
+        </div>
+        <div class="texto3">
+            <p>"Descubre las iniciativas que transforman Montes de Oca. Sé parte del cambio participando en proyectos que mejoran nuestra comunidad. ¡Tu voz y acción cuentan!"</p>
+        </div>
+
+        <% if (usuarioLogueado) { %>
+            <div class="contenedorBoton">
+                <a href="/formularioIniciativas" class="iniciativaBoton">Crea tu iniciativa</a>
+            </div>
+        <% } %>
+
+        <div class="cards">
+            <div class="card">
+                <i class="iconCard fa-solid fa-tree-city"></i>
+                <h3>Reciclaje en parques</h3>
+                <a class="enlace" href="/iniciativa">Ver información <i class="flecha fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="card">
+                <i class="iconCard fa-solid fa-road"></i>
+                <h3>Mejoras en aceras</h3>
+                <a class="enlace" href="/iniciativa">Ver información <i class="flecha fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="card">
+                <i class="iconCard fa-solid fa-lightbulb"></i>
+                <h3>Iluminación en parques públicos</h3>
+                <a class="enlace" href="/iniciativa">Ver información <i class="flecha fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="card">
+                <i class="iconCard fa-solid fa-sun-plant-wilt"></i>
+                <h3>Reforestación urbana</h3>
+                <a class="enlace" href="/iniciativa">Ver información <i class="flecha fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="card">
+                <i class="iconCard fa-solid fa-futbol"></i>
+                <h3>Zonas de juegos infantiles</h3>
+                <a class="enlace" href="/iniciativa">Ver información <i class="flecha fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="card">
+                <i class="iconCard fa-solid fa-video"></i>
+                <h3>Cámaras de seguridad en parques</h3>
+                <a class="enlace" href="/iniciativa">Ver información <i
+                        class="flecha fa-solid fa-arrow-right"></i></a>
+            </div>
+
+        
+
+        </div>
+    </div>
+    <!--FOOTER-->
+    <footer>
+        <div class="contenedorFooter">
+            <div class="primeraColumnaFooter">
+                <img class="footerLogo" src="./img/LogoMuniBlanco.png" width="158px" alt="logo municipales">
+            </div>
+            <div class="footerColumna">
+                <a href="/paginaServicios">Servicios</a>
+                <a href="/usuarioIniciativas">Iniciativas</a>
+                <a href="/paginaNoticia2">Noticias</a>
+                <a href="/formularioAvisosAdministrador">Avisos</a>
+                <a href="/Denuncias">Denuncias</a>
+            </div>
+            <div class="footerColumna redesColumna">
+                <a href="https://www.instagram.com/gobmontesdeoca/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/gobmontesdeoca/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/GobMontesDeOca"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCux4pfOGXArPst7ZyDjxpog"><i class="fa-brands fa-square-youtube fa-bounce"></i></a>
+            </div>
+        </div>
+        <div class="copyRight">
+            <p>Todos los derechos reservados Municipalidad de Montes de Oca</p>
+        </div>
+    </footer>
+
+    <script src="js/usuarioIniciativas.js"></script>
+
+</body>
+
+</html>

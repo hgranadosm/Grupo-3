@@ -163,6 +163,7 @@ nav .menuEnlace:hover{
     cursor: pointer;
     font-size: 0.8rem;
     transition: .3s;
+    width: 47%;
 }
 
 .boton1:hover{
@@ -202,7 +203,7 @@ nav .menuEnlace:hover{
     flex-wrap: wrap;
     gap: 10px;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .contenedorTablaResponsive{
@@ -419,3 +420,26 @@ footer {
     }
 }
 
+
+.status p{
+    text-align: center;
+    color: #a0a0a0;
+    padding: 4px 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.aprobado{
+    color: rgb(135, 209, 135) !important;
+ 
+}
+
+.rechazado{
+    color: rgb(203, 5, 5)  !important;
+
+}
+
+.w-100{
+    width: 100% !important; 
+}

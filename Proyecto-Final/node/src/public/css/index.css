@@ -624,3 +624,9 @@ footer {
     }
 }
 /* final responsive contenido */
+
+
+.iconoMenu {
+    color: #f57a47;
+    transition: .3s;
+}

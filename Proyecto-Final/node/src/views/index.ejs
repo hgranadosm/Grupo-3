@@ -14,27 +14,57 @@
 </head>
 
 <body>
-    <header>
-        <div class="contenedorHeader">
-            <a href="/index" class="logoContentedor">
-                <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
-                <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
-            </a>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <nav class="menuHeader opciones">
-                <a href="/paginaServicios">Servicios<span></span></a>
-                <a href="/usuarioIniciativas">Iniciativas<span></span></a>
-                <a href="/paginaNoticia2">Noticias<span></span></a>
-                <a href="/formularioAvisosAdministrador">Avisos<span></span></a>
-                <a href="/Denuncias">Denuncias<span></span></a>
-                <a class="boton" href="/registroDeUsuario">Regístrate</a>
-                <a class="boton" href="/inicioSesion">Inicia sesión</a>
-            </nav>
-        </div>
-    </header>
+    <% if (usuarioLogueado) { %>
+        <header>
+            <div class="contenedorHeader">
+                <a href="/index" class="logoContentedor">
+                    <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                    <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+                </a>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <nav class="menuHeader opciones">
+                    <a class="menuEnlace" href="/paginaServicios">Servicios</a>
+                    <a class="menuEnlace" href="<%= rol === 'admin' ? '/administradorIniciativas' : '/usuarioIniciativas' %>">Iniciativas</a>
+                    <a class="menuEnlace" href="/paginaNoticia2">Noticias</a>
+                    <a class="menuEnlace" href="<%= rol === 'admin' || rol == 'consejo' ? '/formularioAvisosAdministrador' : '/index' %>">Avisos</a>
+                    <a class="menuEnlace" 
+                        href="<%= rol === 'admin' ? '/Denuncias' : (rol === 'consejo' ? '/consejoTablaDenuncias' : '/usuarioTablaDenuncias') %>">
+                        Denuncias
+                    </a>
+                    <a class="menuIconoEnlace" href="/editarPerfil">
+                        <i class="iconoMenu fa-solid fa-user"></i>                
+                    </a>
+                    <a class="boton" onclick="cerrarSesion()" >Cerrar sesión</a>
+                </nav>
+            </div>
+        </header>
+        <% } else { %>
+        <header>
+            <div class="contenedorHeader">
+                <a href="/index" class="logoContentedor">
+                    <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                    <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+                </a>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <nav class="menuHeader opciones">
+                    <a href="/paginaServicios">Servicios<span></span></a>
+                    <a href="/usuarioIniciativas">Iniciativas<span></span></a>
+                    <a href="/index">Noticias<span></span></a>
+                    <a href="/index">Avisos<span></span></a>
+                    <a href="/index">Denuncias<span></span></a>
+                    <a class="boton" href="/registroDeUsuario">Regístrate</a>
+                    <a class="boton" href="/inicioSesion">Inicia sesión</a>
+                </nav>
+            </div>
+        </header>
+        <% } %>
+        
 
     <div class="containerInicio">
         <div class="tituloPrincipal">
@@ -215,6 +245,8 @@
             <p>Todos los derechos reservados Municipalidad de Montes de Oca</p>
         </div>
     </footer>
+
+    <script src="js/index.js"></script>
 </body>
 
 </html>

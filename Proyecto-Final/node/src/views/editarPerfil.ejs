@@ -17,29 +17,56 @@
 
 <body>
 
-    <header>
-        <div class="contenedorHeader">
-            <a href="/index" class="logoContentedor">
-                <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
-                <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
-            </a>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <nav class="menuHeader opciones">
-                <a class="menuEnlace" href="/paginaServicios">Servicios</a>
-                <a class="menuEnlace" href="/usuarioIniciativas">Iniciativas</a>
-                <a class="menuEnlace" href="/paginaNoticia2">Noticias</a>
-                <a class="menuEnlace" href="/formularioAvisosAdministrador">Avisos</a>
-                <a class="menuEnlace" href="/Denuncias">Denuncias</a>
-                <a class="menuIconoEnlace" href="/editarPerfil">
-                    <i class="iconoMenu fa-solid fa-user"></i>
+    <% if (usuarioLogueado) { %>
+        <header>
+            <div class="contenedorHeader">
+                <a href="/index" class="logoContentedor">
+                    <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                    <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
                 </a>
-                <a class="boton" href="/inicioSesion">Cerrar sesión</a>
-            </nav>
-        </div>
-    </header>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <nav class="menuHeader opciones">
+                    <a class="menuEnlace" href="/paginaServicios">Servicios</a>
+                    <a class="menuEnlace" href="<%= rol === 'admin' ? '/administradorIniciativas' : '/usuarioIniciativas' %>">Iniciativas</a>
+                    <a class="menuEnlace" href="/paginaNoticia2">Noticias</a>
+                    <a class="menuEnlace" href="<%= rol === 'admin' || rol == 'consejo' ? '/formularioAvisosAdministrador' : '/index' %>">Avisos</a>
+                    <a class="menuEnlace" 
+                        href="<%= rol === 'admin' ? '/Denuncias' : (rol === 'consejo' ? '/consejoTablaDenuncias' : '/usuarioTablaDenuncias') %>">
+                        Denuncias
+                    </a>
+                    <a class="menuIconoEnlace" href="/editarPerfil">
+                        <i class="iconoMenu fa-solid fa-user"></i>                
+                    </a>
+                    <a class="boton" onclick="cerrarSesion()" >Cerrar sesión</a>
+                </nav>
+            </div>
+        </header>
+        <% } else { %>
+        <header>
+            <div class="contenedorHeader">
+                <a href="/index" class="logoContentedor">
+                    <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                    <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+                </a>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <nav class="menuHeader opciones">
+                    <a href="/paginaServicios">Servicios<span></span></a>
+                    <a href="/usuarioIniciativas">Iniciativas<span></span></a>
+                    <a href="/index">Noticias<span></span></a>
+                    <a href="/index">Avisos<span></span></a>
+                    <a href="/index">Denuncias<span></span></a>
+                    <a class="boton" href="/registroDeUsuario">Regístrate</a>
+                    <a class="boton" href="/inicioSesion">Inicia sesión</a>
+                </nav>
+            </div>
+        </header>
+        <% } %>
 
 
     <div class="containerPadre">
@@ -51,9 +78,7 @@
             <div class="usuario">
                 <img src="./img/perfil.png" alt="">
             </div>
-            <div class="icono">
-                <i class="fa-solid fa-image"></i>
-            </div>
+           
         </div>
 
         <form action="" class="formulario" id="formulario">
@@ -62,7 +87,7 @@
 
                 <!-- Grupo Nombre -->
                 <div class="formularioGrupo" id="grupoNombre">
-                    <input type="text" class="formularioInput" name="nombre" id="nombre" placeholder="Hillary">
+                    <input type="text" class="formularioInput" name="nombre" id="nombre" placeholder="Nombre" value="<%= usuario.nombre %>" >
                     <i class='bx formularioValidacion-estado'></i>
                     <p class="formularioInput-error">Ingrese un nombre válido (solo letras).</p>
                 </div>
@@ -70,7 +95,7 @@
                 <!-- Grupo Primer Apellido -->
                 <div class="formularioGrupo" id="grupoApellido1">
                     <input type="text" class="formularioInput" name="apellido1" id="apellido1"
-                        placeholder="Granados">
+                        placeholder="Primer pellido" value="<%= usuario.apellido1 %>">
                     <i class='bx formularioValidacion-estado'></i>
                     <p class="formularioInput-error">Ingrese un apellido válido (solo letras).</p>
                 </div>
@@ -78,7 +103,7 @@
                 <!-- Grupo Segundo Apellido -->
                 <div class="formularioGrupo" id="grupoApellido2">
                     <input type="text" class="formularioInput" name="apellido2" id="apellido2"
-                        placeholder="Mora">
+                        placeholder="Segundo Apellido" value="<%= usuario.apellido2 %>">
                     <i class='bx formularioValidacion-estado'></i>
                     <p class="formularioInput-error">Ingrese un apellido válido (solo letras).</p>
                 </div>
@@ -90,14 +115,14 @@
                 <!-- Grupo Identificación -->
                 <div class="formularioGrupo identificacionInput" id="grupoIdentificacion">
                     <input type="text" class="formularioInput" name="identificacion" id="identificacion"
-                        placeholder="1 1735 2735">
+                        placeholder="Identificación" value="<%= usuario.identificacion %>">
                     <i class='bx formularioValidacion-estado'></i>
                     <p class="formularioInput-error">Ingrese una identificación válida (9-11 dígitos).</p>
                 </div>
 
                 <!-- Grupo Teléfono -->
                 <div class="formularioGrupo telefonoInput" id="grupoTelefono">
-                    <input type="text" class="formularioInput" name="telefono" id="telefono" placeholder="8354 7366">
+                    <input type="text" class="formularioInput" name="telefono" id="telefono" placeholder="Teléfono"  value="<%= usuario.telefono %>">
                     <i class='bx formularioValidacion-estado'></i>
                     <p class="formularioInput-error">Ingrese un número de teléfono válido.</p>
                 </div>
@@ -108,8 +133,8 @@
 
                 <!-- Grupo Correo Electrónico -->
                 <div class="formularioGrupo correoPerfil" id="grupoCorreo">
-                    <input type="email" value="laly@gmail.com" class="formularioInput" name="correo" id="correo"
-                        placeholder="Correo electrónico" disabled>
+                    <input type="email" class="formularioInput" name="correo" id="correo"
+                        placeholder="Correo electrónico" value="<%= usuario.correo %>" disabled>
                     <i class='bx formularioValidacion-estado'></i>
                     <p class="formularioInput-error">Ingrese un correo válido.</p>
                 </div>
@@ -119,11 +144,11 @@
                 <div class="formularioGrupo menuDesplegable distrito" id="grupoMenu">
                     <div class="formularioGrupo-input">
                         <select name="menuDesplegable" id="menuDesplegable">
-                            <option value="#" selected disabled>Seleccione un distrito</option>
-                            <option value="San Pedro">San Pedro</option>
-                            <option value="Sabanilla">Sabanilla</option>
-                            <option value="Mercedes">Mercedes</option>
-                            <option value="San Rafael">San Rafael</option>
+                            <option value="#" disabled>Seleccione un distrito</option>
+                            <option value="San Pedro" <%= usuario.distrito === 'San Pedro' ? 'selected' : '' %>>San Pedro</option>
+                            <option value="Sabanilla" <%= usuario.distrito === 'Sabanilla' ? 'selected' : '' %>>Sabanilla</option>
+                            <option value="Mercedes" <%= usuario.distrito === 'Mercedes' ? 'selected' : '' %>>Mercedes</option>
+                            <option value="San Rafael" <%= usuario.distrito === 'San Rafael' ? 'selected' : '' %>>San Rafael</option>
                         </select>
                     </div>
                 </div>
@@ -131,7 +156,7 @@
             </div>
 
             <div class="formularioGrupo containerDetalle" id="grupodetalle">
-                <textarea rows="10" class="formularioInput" name="detalle" id="detalle" placeholder="Detalles adicionales de su dirección"></textarea>
+                <textarea rows="10" class="formularioInput" name="detalle" id="detalle" placeholder="Detalles adicionales de su dirección"><%= usuario.detalles %></textarea>
                 <i class='bx formularioValidacion-estado'></i>
                 <p class="formularioInput-error">Debe agregar detalles adicionales de su dirección. Máximo de 300 caracteres y sin carateres especiales como @, #, $, %, &, *</p>
             </div>
@@ -144,6 +169,9 @@
 
                 <div class="formularioCamposRequeridos" id="formularioCamposRequeridos">
                     <p><b>Por favor completa correctamente el formulario</b></p>
+                </div>
+
+                <div class="formularioCamposRequeridos" id="ErrorEnApi">
                 </div>
 
                 <div class="formularioMensaje-exito" id="formularioMensaje-exito">

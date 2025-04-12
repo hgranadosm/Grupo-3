@@ -21,7 +21,8 @@ let userSchema = new mongoose.Schema({
     telefono: Number,
     distrito:{type:String,required:true},
     detalles:{type:String,required:true},
-    contrasena:{type:String,required:true}
+    contrasena:{type:String,required:true},
+    rol: { type: String, required: true } 
 },{versionKey:false});
 
 //Model
@@ -29,3 +30,4 @@ let userSchema = new mongoose.Schema({
 let user = new mongoose.model('users', userSchema);
 
 module.exports = user;
+
