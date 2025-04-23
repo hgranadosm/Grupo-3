@@ -57,12 +57,22 @@ app.listen(3000,()=>{
 
 // verificar la sesión función (middleware)
 function verificarSesion(req, res, next) {
+    res.set('Cache-Control', 'no-store'); 
     if (req.session.usuario) {
         console.log('logueado correctamente')
         return next(); // Si hay sesión, continua 
     } else {
         console.log('usuario no logueado redireccionando')
         res.redirect('/inicioSesion'); // Redirigir al login si no hay sesión
+    }
+}
+
+function verificarUsuarioNoLogueado(req, res, next) {
+    res.set('Cache-Control', 'no-store'); 
+    if (!req.session.usuario) {
+        return next(); 
+    } else {
+        res.redirect('/index');
     }
 }
 
@@ -76,50 +86,47 @@ app.get('/',(req,res)=>{
 });
 
 
-//RUTAS PAGINAS COMPAÑEROS
-
-app.get('/cambioCorreo',(req,res)=>{
-    res.render('cambioCorreo.html');
+app.get('/denuncias',(req,res)=>{
+    res.set('Cache-Control', 'no-store'); 
+    if(req.session.rol == 'usuario'){
+        res.redirect('/usuarioTablaDenuncias');
+    } else if (req.session.rol == 'consejo') {
+        res.redirect('/consejoTablaDenuncias');
+    }else {
+        res.redirect('/index');
+    }
 });
 
-app.get('/comiteCantonal',(req,res)=>{
-    res.render('comiteCantonal.html');
+
+
+app.get('/avisos',(req,res)=>{
+    res.set('Cache-Control', 'no-store'); 
+    if(req.session.rol == 'consejo' || req.session.rol == 'admin'){
+        res.redirect('/formularioAvisosAdministrador');
+    } else {
+        res.redirect('/index');
+    }
 });
 
-app.get('/controlVial',(req,res)=>{
-    res.render('controlVial.html');
+app.get('/iniciativas',(req,res)=>{
+    res.set('Cache-Control', 'no-store'); 
+    if( req.session.rol == 'admin'){
+        res.redirect('/administradorIniciativas');
+    } else {
+        res.redirect('/usuarioIniciativas');
+    }
 });
 
-app.get('/Denuncias',(req,res)=>{
-    res.render('Denuncias.html');
-});
 
-app.get('/feriaSalud',(req,res)=>{
-    res.render('feriaSalud.html');
-});
-
-app.get('/inicioSesion',(req,res)=>{
+app.get('/inicioSesion', verificarUsuarioNoLogueado, (req,res)=>{
+    res.set('Cache-Control', 'no-store'); 
     res.render('inicioSesion.html');
 });
 
-app.get('/paginaNoticia2',(req,res)=>{
-    res.render('paginaNoticia2.html');
-});
 
-app.get('/reciclaje',(req,res)=>{
-    res.render('reciclaje.html');
-});
-
-app.get('/recuperar',(req,res)=>{
-    res.render('recuperar.html');
-});
-
-
-
-
-// Rutas de mis funcionalidades
 
 app.get('/administradorIniciativas',  verificarSesion,  async (req, res) => {
+    res.set('Cache-Control', 'no-store'); 
     try {
         const listaIniciativas = await iniciativas.find(); // trae todas las iniciativas
         res.render('administradorIniciativas.ejs', { iniciativas: listaIniciativas });
@@ -129,11 +136,13 @@ app.get('/administradorIniciativas',  verificarSesion,  async (req, res) => {
     }
 });
 
-app.get('/consejoTablaDenuncias',(req,res)=>{
+app.get('/consejoTablaDenuncias', verificarSesion, (req,res)=>{
+    res.set('Cache-Control', 'no-store'); 
     res.render('consejoTablaDenuncias.html');
 });
 
 app.get('/editarPerfil', verificarSesion, async (req,res)=>{
+    res.set('Cache-Control', 'no-store'); 
     try {
         const usuario = await user.findOne({ correo: req.session.usuario });
         if (!usuario) {
@@ -149,16 +158,19 @@ app.get('/editarPerfil', verificarSesion, async (req,res)=>{
 });
 
 app.get('/formularioAvisosAdministrador', verificarSesion, (req,res)=>{
+    res.set('Cache-Control', 'no-store'); 
     const usuarioLogueado = req.session.usuario || null;
     const rol = req.session.rol || null;
     res.render('formularioAvisosAdministrador.ejs', { usuarioLogueado, rol });
 });
 
-app.get('/formularioIniciativas',(req,res)=>{
+app.get('/formularioIniciativas', verificarSesion, (req,res)=>{
+    res.set('Cache-Control', 'no-store'); 
     res.render('formularioIniciativas.html');
 });
 
 app.get('/index', (req, res) => {
+    res.set('Cache-Control', 'no-store'); 
     const usuarioLogueado = req.session.usuario || null;
     const rol = req.session.rol || null;
     res.render('index.ejs', { usuarioLogueado, rol });
@@ -170,14 +182,17 @@ app.get('/iniciativa',(req,res)=>{
 });
 
 app.get('/paginaServicios',(req,res)=>{
-    res.render('paginaServicios.html');
+    res.set('Cache-Control', 'no-store'); 
+    const usuarioLogueado = req.session.usuario || null;
+    const rol = req.session.rol || null;
+    res.render('paginaServicios.ejs', { usuarioLogueado, rol });
 });
 
 app.get('/perfilUsuariosCiudadanos',(req,res)=>{
     res.render('perfilUsuariosCiudadanos.html');
 });
 
-app.get('/registroDeUsuario',(req,res)=>{
+app.get('/registroDeUsuario', verificarUsuarioNoLogueado, (req,res)=>{
     res.render('registroDeUsuario.html');
 });
 
@@ -186,12 +201,14 @@ app.get('/servicios',(req,res)=>{
 });
 
 app.get('/usuarioIniciativas', (req, res) => {
+    res.set('Cache-Control', 'no-store'); 
     const usuarioLogueado = req.session.usuario || null;
     const rol = req.session.rol || null;
     res.render('usuarioIniciativas.ejs', { usuarioLogueado, rol });
 });
 
-app.get('/usuarioTablaDenuncias',(req,res)=>{
+app.get('/usuarioTablaDenuncias', verificarSesion, (req,res)=>{
+    res.set('Cache-Control', 'no-store');
     res.render('usuarioTablaDenuncias.html');
 });
 

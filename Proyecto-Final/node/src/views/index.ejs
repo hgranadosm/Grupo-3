@@ -27,11 +27,11 @@
                 </label>
                 <nav class="menuHeader opciones">
                     <a class="menuEnlace" href="/paginaServicios">Servicios</a>
-                    <a class="menuEnlace" href="<%= rol === 'admin' ? '/administradorIniciativas' : '/usuarioIniciativas' %>">Iniciativas</a>
-                    <a class="menuEnlace" href="/paginaNoticia2">Noticias</a>
-                    <a class="menuEnlace" href="<%= rol === 'admin' || rol == 'consejo' ? '/formularioAvisosAdministrador' : '/index' %>">Avisos</a>
+                    <a class="menuEnlace" href="/iniciativas">Iniciativas</a>
+                    <a class="menuEnlace" href="/index">Noticias</a>
+                    <a class="menuEnlace" href="/avisos">Avisos</a>
                     <a class="menuEnlace" 
-                        href="<%= rol === 'admin' ? '/Denuncias' : (rol === 'consejo' ? '/consejoTablaDenuncias' : '/usuarioTablaDenuncias') %>">
+                        href="/denuncias">
                         Denuncias
                     </a>
                     <a class="menuIconoEnlace" href="/editarPerfil">

@@ -1,4 +1,3 @@
-
 function cerrarSesion() {
     fetch('/logout', {
         method: 'POST',

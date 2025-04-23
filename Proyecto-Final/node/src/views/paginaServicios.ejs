@@ -16,29 +16,58 @@
 <body>
 
        <!--MENU-->
-       <header>
-        <div class="contenedorHeader">
-            <a href="/index" class="logoContentedor">
-                <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
-                <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
-            </a>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <nav class="menuHeader opciones">
-                <a class="menuEnlace" href="/paginaServicios">Servicios</a>
-                <a class="menuEnlace" href="/usuarioIniciativas">Iniciativas</a>
-                <a class="menuEnlace" href="/paginaNoticia2">Noticias</a>
-                <a class="menuEnlace" href="/formularioAvisosAdministrador">Avisos</a>
-                <a class="menuEnlace" href="/Denuncias">Denuncias</a>
-                <a class="menuIconoEnlace" href="/editarPerfil">
-                    <i class="iconoMenu fa-solid fa-user"></i>                
+       <% if (usuarioLogueado) { %>
+        <header>
+            <div class="contenedorHeader">
+                <a href="/index" class="logoContentedor">
+                    <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                    <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
                 </a>
-                <a class="boton" href="/inicioSesion">Cerrar sesión</a>
-            </nav>
-        </div>
-    </header>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <nav class="menuHeader opciones">
+                    <a class="menuEnlace" href="/paginaServicios">Servicios</a>
+                    <a class="menuEnlace" href="/iniciativas">Iniciativas</a>
+                    <a class="menuEnlace" href="/index">Noticias</a>
+                    <a class="menuEnlace" href="/avisos">Avisos</a>
+                    <a class="menuEnlace" 
+                        href="/denuncias">
+                        Denuncias
+                    </a>
+                    <a class="menuIconoEnlace" href="/editarPerfil">
+                        <i class="iconoMenu fa-solid fa-user"></i>                
+                    </a>
+                    <a class="boton" onclick="cerrarSesion()" >Cerrar sesión</a>
+                </nav>
+            </div>
+        </header>
+        <% } else { %>
+        <header>
+            <div class="contenedorHeader">
+                <a href="/index" class="logoContentedor">
+                    <img class="isotipo" src="./img/isotipo.png" alt="isotipo">
+                    <img class="logo" src="./img/LogoMuni.png" alt="isologotipo">
+                </a>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <nav class="menuHeader opciones">
+                    <a href="/paginaServicios">Servicios<span></span></a>
+                    <a href="/usuarioIniciativas">Iniciativas<span></span></a>
+                    <a href="/index">Noticias<span></span></a>
+                    <a href="/index">Avisos<span></span></a>
+                    <a href="/index">Denuncias<span></span></a>
+                    <a class="boton" href="/registroDeUsuario">Regístrate</a>
+                    <a class="boton" href="/inicioSesion">Inicia sesión</a>
+                </nav>
+            </div>
+        </header>
+        <% } %>
+        
+
 
     <!--Iniciativas-->
 
@@ -169,6 +198,8 @@
             <p>Todos los derechos reservados Municipalidad de Montes de Oca</p>
         </div>
     </footer>
+
+    <script src="js/paginaServicios.js"></script>
 
 </body>
 
