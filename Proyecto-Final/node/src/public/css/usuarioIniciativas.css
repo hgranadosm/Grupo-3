@@ -396,6 +396,12 @@ footer {
         text-decoration: none;
         color: #282d4d;
         font-weight: 500;
+        transition: 0.3s;
+    }
+    nav a:hover {
+        color: #ffffff;
+        background-color: #ecf007;
+        border-radius: 100px;
     }
 }
 

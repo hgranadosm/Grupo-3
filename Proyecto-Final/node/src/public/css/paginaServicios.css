@@ -368,7 +368,17 @@ footer {
     nav a {
         padding: 3px 13px;
         font-size: 0.8rem;
+        text-decoration: none;
+        color: #282d4d;
+        font-weight: 500;
+        transition: 0.3s;
     }
+    nav a:hover {
+        color: #ffffff;
+        background-color: #ecf007;
+        border-radius: 100px;
+    }
+    
 }
 
 
